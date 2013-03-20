@@ -1,0 +1,92 @@
+﻿/* carousel for audience background*/
+
+.image_carousel1 {
+	padding: 0px 0px 0px 17px; position: relative;
+}
+
+.image_carousel1 img {
+	margin: 7px 2px 7px 2px; padding: 9px; border: 1px solid rgb(204, 204, 204); float: left; display: block; background-color: white;
+}
+.image_carousel1 img.selected {
+	background: #797676;
+}
+a.prev1 {
+	top: 55px; width: 45px; height: 50px; display: block; position: absolute;
+}
+a.next1 {
+	top: 55px; width: 45px; height: 50px; display: block; position: absolute;
+}
+a.prev1 {
+	background: url("../images/arrow-left.png") no-repeat; left: -40px; margin-left: 37px;
+}
+a.next1 {
+	background: url("../images/arrow-right.png") no-repeat; right: -10px; margin-right: -35px;
+}
+a.prev1 span {
+	display: none;
+}
+a.next1 span {
+	display: none;
+}
+
+/* carousel for theme */
+.image_carousel {
+	padding: 0px 0px 0px 30px; position: relative;
+}
+.image_carousel img {
+	margin: 7px 2px 7px 2px; padding: 9px; border: 1px solid rgb(204, 204, 204); float: left; display: block; background-color: white;
+}
+.image_carousel img.selected {
+	background: #797676;
+}
+a.prev {
+	top: 45px; width: 45px; height: 50px; display: block; position: absolute;
+}
+a.prevSS {
+	top: 32px !important;
+}
+a.next {
+	top: 45px; width: 45px; height: 50px; display: block; position: absolute;
+}
+a.nextSS {
+	top: 32px !important;
+}
+a.prev {
+	background: url("../images/arrow-left.png") no-repeat; left: -40px; margin-left: 45px;
+}
+a.next {
+	background: url("../images/arrow-right.png") no-repeat; right: -10px; margin-right: -40px;
+}
+a.prev span {
+	display: none;
+}
+a.next span {
+	display: none;
+}
+.clearfix {
+	clear: both; float: none;
+}
+#basic-modal-content {
+	display: none;
+}
+#simplemodal-overlay {
+	background-color: rgb(0, 0, 0);
+}
+#simplemodal-container {
+	padding: 1px; border: 4px solid rgb(68, 68, 68); color: rgb(187, 187, 187); background-color: rgb(51, 51, 51);
+}
+#simplemodal-container .simplemodal-data {
+	padding: 8px;
+}
+#simplemodal-container code {
+	background: rgb(20, 20, 20); padding: 4px 6px 2px; color: rgb(187, 187, 187); font-size: 12px; margin-bottom: 0px; border-left-color: rgb(101, 180, 61); border-left-width: 3px; border-left-style: solid; display: block;
+}
+#simplemodal-container a {
+	color: rgb(221, 221, 221);
+}
+#simplemodal-container a.modalCloseImg {
+	background: url("../Images/x.png") no-repeat; top: -15px; width: 25px; height: 29px; right: -16px; display: inline; position: absolute; z-index: 3200; cursor: pointer;
+}
+#simplemodal-container h3 {
+	color: rgb(132, 184, 217);
+}

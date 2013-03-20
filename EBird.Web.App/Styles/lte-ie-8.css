@@ -1,0 +1,9 @@
+.MainNav ul li a				{border-radius:8px 8px 0 0; behavior: url(Css/IE.htc); position:relative;}
+.Temp1 .LPart .widgets	{border-radius:8px; behavior: url(Css/IE.htc); position:relative;  }
+.Temp1 .LPart .widgets h2 { border-radius:8px 8px 0 0; behavior: url(Css/IE.htc); position:relative; }
+.Temp1 .LPart .LinkBtn ul li {  border-radius:8px; behavior: url(Css/IE.htc); position:relative; }
+.Temp1 .RPart .widgets .Steps	{border-radius:8px; behavior: url(Css/IE.htc); position:relative; }
+.Temp1 .RPart .widgets .Steps ul li.Current {border-radius:30px; behavior: url(Css/IE.htc); position:relative;  }
+.SubBtn,
+a.SubBtn						{ border-radius:8px; behavior: url(Css/IE.htc); position:relative; }
+

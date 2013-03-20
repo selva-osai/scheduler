@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="popupMaster.master.cs"
+    Inherits="EBird.Web.App.MasterPages.popupMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link id="Link1" href="/Styles/popUpWinStyle.css" rel="stylesheet" type="text/css" />
+    <link id="Link2" href="/Styles/radStyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+        function RowMouseOver(sender, eventArgs) {
+            $get(eventArgs.get_id()).className += " RowMouseOver";
+        }
+
+        function RowMouseOut(sender, eventArgs) {
+            var row = $get(eventArgs.get_id());
+            row.className = row.className.replace("RowMouseOver", "RowMouseOut");
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript" src="/js/myscroll.js"></script>
+    <link id="css_scroll" href="/css/scrollbar.css" rel="stylesheet" />
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

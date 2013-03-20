@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Attendees List</title>
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/main-styles.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="js/jquery.jcarousel.min.js"></script>
+    </head>
+<body onload="startTime()">
+<div class="main">
+	<div class="header">
+		<div class="headertop">
+			<div class="tophdrtit left">
+			<h1>Lauren’s Webcast: Lorem Ipsum dolar sit...</h1>
+			</div>
+			<div class="tdtdatewrp left">
+				<h6 id="todaydate" class="left"></h6>
+				<h6 id="distime"></h6>
+			</div>
+			<div class="livebtnwrp left">
+				<a href="" class="livehdrbtn"><div class="greenbtn"></div>START PRACTICING</a>
+				<a href="" class="livehdrbtn"><div class="greenbtn"></div>START LIVE</a>
+			</div>
+			<div class="timewrp left"><p id="timedis" class="timesty"></p></div>
+			<div class="helpwrp left">
+				<a><span class="helpbtn right"></span></a>
+			</div>
+		</div>
+		<div class="menuwrp">
+			<div id="menu">
+				<ul class="menu-icon-navi">
+					<li class="setup-icon"><a href="#"><i></i>Setup</a></li>
+					<li class="liveview-icon"><a href="liveview.html"><i></i>Live View</a></li>
+					<li class="prv-icon"><a href="preview.html"><i></i>Preview</a></li>
+					<li class="qa-icon"><a href="qa.html"><i></i>Q&A</a></li>
+					<li class="teamchat-icon"><a href="teamchat.html"><i></i>Team Chat</a></li>
+		         	<li class="attendees-icon"><a href="attendees.html"><i></i>Attendees</a></li>
+		            <li class="conswd-icon"><a href="#"><i></i>Console Widgets</a></li>
+		            <li class="screenshr-icon"><a href="#"><i></i>Screenshare</a></li>
+		            <li class="webcam-icon"><a href="#" style="border-right: none;"><i></i>Webcam</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="page-wrapper">
+		<div class="bigwhitebox">
+			<div class="attendeeswrp">
+				<div class="attendeesbxtop">
+					<h3 class="left">ATTENDEE LIST(S)</h3>
+					<a href="#" class="maxibtm right"></a>
+					<a href="#" class="minizbtm right"></a>
+				</div>
+				<div class="attendeesbxcntr">
+					<div id="whitearea">
+						<table cellpadding="0" cellspacing="0" border="0" class="display" id="qatable">
+							<thead>
+								<tr >
+									<th>Name</th>
+									<th>Company</th>
+									<th>Login Name</th>									
+								</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Dicson</td>
+								<td class="txtcenter">Snapsession</td>
+								<td class="txtcenter">dicson_m</td>								
+							</tr>	
+							<tr>
+								<td>Martin</td>
+								<td class="txtcenter">Facebook</td>
+								<td class="txtcenter">martin.34</td>								
+							</tr>						  
+							<tr>
+								<td>James Hopes</td>
+								<td class="txtcenter">Jobspora</td>
+								<td class="txtcenter">jameshopes</td>								
+							</tr>						  
+						   </tbody>
+						</table>
+					</div>
+					<!-- <div class="attdslistwrp">
+						<div class="attdslistcnt">
+							<div class="attlsthdwrp">
+								<p class="hdrcontent left">Deepu</p>
+								<p class="hdrcontent left">Deepu</p>
+								<p class="hdrcontent left">Deepu</p>
+								
+							</div>
+						</div>
+					</div>-->
+					<div class="left" style="width: 100%;">
+						<a href="" class="reflstbtn left">REFRESH LIST</a>
+						<a href="" class="blockattbtn right">BLOCK ATTENDEE</a>
+					</div>
+				</div>
+				<div class="attendeesbxbtm">
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	</div><script type="text/javascript" src="js/jq.dataTables.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#qatable').dataTable( {
+				"sScrollY": "500px",
+				"bPaginate": true,
+				"bScrollCollapse": true
+				
+			} );
+		} );
+		function startTime()
+		{
+		var today=new Date();
+		var h=today.getHours();
+		var m=today.getMinutes();
+		var s=today.getSeconds();
+		m=checkTime(m);
+		s=checkTime(s);
+		document.getElementById('timedis').innerHTML=h+":"+m+":"+s;
+		t=setTimeout(function(){startTime()},500);
+		}
+		function checkTime(i)
+		{
+		if (i<10)
+		  {
+		  i="0" + i;
+		  }
+		return i;
+		}
+	</script>
+	<script type="text/javascript">
+		var months=new Array(13);
+		months[1]="January";
+		months[2]="February";
+		months[3]="March";
+		months[4]="April";
+		months[5]="May";
+		months[6]="June";
+		months[7]="July";
+		months[8]="August";
+		months[9]="September";
+		months[10]="October";
+		months[11]="November";
+		months[12]="December";
+		var time=new Date();
+		var lmonth=months[time.getMonth() + 1];
+		var date=time.getDate();
+		var year=time.getYear();
+		if (year < 2000)
+		year = year + 1900;
+		document.getElementById("todaydate").innerHTML = lmonth+" "+date+", "+year;
+		var thetime=new Date();
+
+		var nhours=thetime.getHours();
+		var nmins=thetime.getMinutes();
+		var nsecn=thetime.getSeconds();
+		var AorP=" ";
+		if (nhours>=12)
+		    AorP="pm";
+		else
+		    AorP="am";
+		if (nhours>=13)
+		    nhours-=12;
+		if (nhours==0)
+		 nhours=12;
+		if (nsecn<10)
+		 nsecn="0"+nsecn;
+		if (nmins<10)
+		 nmins="0"+nmins;
+		setTimeout('startclock()',1000);
+		document.getElementById("distime").innerHTML=" - "+nhours+":"+nmins+" "+AorP;
+
+		jQuery(document).ready(function() {
+		    jQuery('#mycarousel').jcarousel({
+		        vertical: true,
+		        scroll: 2
+		    });
+			jQuery('#mycarousel1').jcarousel({
+		    	horizontal: true,
+		        scroll: 2
+		    });		    
+		});			
+	</script>
+	<div class="footer">
+		<p class="cpyright">© 2012 SnapSession Inc. All rights reserved.</p>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterFullScreen.master.cs" Inherits="EBird.Web.App.MasterPages.masterFullScreen" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Schedule a Webinar</title>
+    <link href="../Styles/Style.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="../Styles/lte-ie-8.css" /><![endif]-->
+</head>
+<body>
+    <!--Begin Container -->
+    <div class="Container1">
+        <!--Begin Header -->
+        <form id="form1" runat="server">
+        <div class="Header">
+            <div class="LPart">
+                <div class="Logo">
+                    <h1>
+                        <a runat="server" id="lnkHome" href="~/default.aspx">Snap Session</a></h1>
+                </div>
+            </div>
+            <div class="RPart">
+                <div class="TopLinks">
+                    <ul>
+                        <li>
+                            <asp:Label ID="lblMyName" runat="server" Visible="true" Text="Michael Goodell"></asp:Label>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lbtnMyMoonshot" runat="server" Text="My Snap Session" Visible="true"
+                                OnClick="lbtnMyMoonshot_Click" /></li>
+                        <li class="Last">
+                            <asp:LinkButton ID="lbtnLogout" Visible="true" runat="server" Text="Logout" OnClick="lbtnLogout_Click" CausesValidation="false" /></li>
+                    </ul>
+                </div>
+                <div class="Clr">
+                </div>
+                 <div class="Date">
+                <script type="text/javascript" language="javascript">
+                <!--                    Begin
+                    var months = new Array(13);
+                    months[1] = "January";
+                    months[2] = "February";
+                    months[3] = "March";
+                    months[4] = "April";
+                    months[5] = "May";
+                    months[6] = "June";
+                    months[7] = "July";
+                    months[8] = "August";
+                    months[9] = "September";
+                    months[10] = "October";
+                    months[11] = "November";
+                    months[12] = "December";
+
+                    var d = new Date();
+                    var weekday = new Array(7);
+                    weekday[0] = "Sunday";
+                    weekday[1] = "Monday";
+                    weekday[2] = "Tuesday";
+                    weekday[3] = "Wednesday";
+                    weekday[4] = "Thursday";
+                    weekday[5] = "Friday";
+                    weekday[6] = "Saturday";
+
+                    var time = new Date();
+                    var lmonth = months[time.getMonth() + 1];
+                    var date = time.getDate();
+                    var year = time.getYear();
+                    if (year < 2000)
+                        year = year + 1900;
+
+                    document.write(weekday[d.getDay()] + ", " + lmonth + " " + date + ", " + year);
+                // End -->
+                </script>
+                </div>
+                <div class="Clr">
+                </div>
+                <!--Begin Main Nav -->
+                <div class="MainNav">
+                    <ul>
+                        <li><a runat="server" id="lnkWeb" href="~/Pages/schedule.aspx">Webinars</a></li>
+                        <li><a runat="server" id="lnkRec" href="~/Pages/recWebinar.aspx">Recorded Webinars </a></li>
+                        <li><a runat="server" id="lnkMeet" href="~/Pages/meet.aspx">Meet Now</a></li>
+                        <li><a runat="server" id="lnkAnaly" href="~/Pages/analytics.aspx">Analytics</a></li>
+                    </ul>
+                </div>
+                <!--End Main Nav -->
+            </div>
+        </div>
+        <!--End Header -->
+        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        </form>
+        <div class="Clr">
+        </div>
+    </div>
+    <!--End Container -->
+    <!--Begin Footer -->
+    <div class="Footer">
+        <div class="FootCont">
+            <div class="LPart">
+                © 2012 Snap Session</div>
+            <div class="RPart">
+                <a href="#">User Agreement</a> | <a href="#">Privacy Policy</a></div>
+        </div>
+    </div>
+    <!--End Footer -->
+</body>
+</html>
+

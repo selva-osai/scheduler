@@ -1,0 +1,16 @@
+﻿#pdheading
+{
+    font-weight:bold;
+    float:left;
+}
+
+#dvLogo1Img
+{
+    background-color: rgb(244, 244, 244);
+}
+
+#dvLogo1Img .ina
+{
+    background-color: #c8c8c8 !important;
+    height:150px !important;
+}

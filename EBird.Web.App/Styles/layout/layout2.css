@@ -1,0 +1,76 @@
+﻿body
+{
+    background: url("../image/contentBG-o.png") repeat-x 0px 69px rgb(189, 209, 233);
+}
+td
+{
+    margin: 0px;
+    padding: 0px;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.content
+{
+    width: 500px;
+    margin: 8px auto;
+    min-height:525px;
+}
+.tleft
+{
+    background: url("/images/layout/1c.png") no-repeat;
+    width: 24px;
+    height: 24px;
+}
+.tmid
+{
+    background: url("/images/layout/1x.png") repeat-x 0px 1px;
+    height: 24px;    
+}
+.tright
+{
+    background: url("/images/layout/1c.png") no-repeat;
+    width: 24px;
+    height: 24px;
+    background-position: -24px 0px;
+}
+
+.lmid
+{
+    background: url("/images/layout/1y.png") repeat-y;
+    width: 24px;    
+}
+
+.rmid
+{
+    background: url("/images/layout/1y.png") repeat-y;
+    width: 24px;
+    background-position: -24px 0px;
+}
+.bleft
+{
+    background: url("/images/layout/1c.png") no-repeat;
+    width: 24px;
+    height: 24px;
+    background-position: 0px -24px;
+}
+.bmid
+{
+    background: url("/images/layout/1x.png") repeat-x 0px 1px;
+    height: 24px;    
+    background-position: 0px -25px;
+}
+.bright
+{
+    background: url("/images/layout/1c.png") no-repeat;
+    width: 24px;
+    height: 24px;
+    background-position: -24px -24px;
+}
+
+.cmc
+{
+    background-color: white;
+}

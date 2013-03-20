@@ -1,0 +1,32 @@
+﻿<root>
+	<tools name="Formatting" enabled="true">
+		<tool name="Bold" />
+		<tool name="Italic" />
+		<tool name="Underline" />
+    <tool separator="true"/>
+    <tool name="JustifyLeft" />
+    <tool name="JustifyCenter" />
+    <tool name="JustifyRight" />
+    <tool separator="true"/>
+		<tool name="ForeColor" />
+		<tool name="BackColor"/>
+		<tool separator="true"/>
+		<tool name="FontName"/>
+		<tool name="RealFontSize" />
+	</tools>
+  <tools name="MainToolbar" enabled="true">
+    <tool name="Cut" />
+    <tool name="Copy" />
+    <tool name="Paste" shortcut="CTRL+!"/>
+    <tool Name="FindAndReplace" />
+  </tools>
+  <tools name="Others" enabled="true">
+    <tool name="Indent" />
+    <tool name="Outdent" />
+    <tool separator="true"/>
+    <tool name="InsertUnorderedList" />
+    <tool name="InsertOrderedList" />
+    <!--<tool name="InsertLink" />-->
+    <tool separator="true"/>
+  </tools>
+</root>

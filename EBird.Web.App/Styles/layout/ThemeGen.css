@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+ /** 							{ margin:0; padding:0;} */
+
+img							{border:none}
+.FLeft						{ float:left}
+.FRight						{ float:right}
+.Registration-Cont { width:630px; margin: 0px auto; padding:0; height:100%; overflow:auto;}
+.Registration-footer { width:700px; margin: 0px auto; padding:0; height:100%; overflow:auto;}
+.Regi-Top-Sec 	{width:55%; float:left;}
+.Clr{clear:both}
+.Date{font-size:11px; font-family:verdana;}
+
+.Regi-Top-Sec1N 	{width:100%; float:left;}
+
+/* My Snapsession style */
+
+.MySS-footer { width:700px; margin: 0px auto; padding:0; height:100%; overflow:auto;}
+
+#dvSSContentContainer 
+{
+    margin: 3px 5px 3px 5px;
+}

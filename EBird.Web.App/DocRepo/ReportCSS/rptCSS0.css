@@ -1,0 +1,109 @@
+﻿/* background - #121212, border - #3F3F41, table head - #5D5D5D, table alternate row - #E0E0E0 */
+body
+{
+    background: #121212;
+    margin-top: 10px;
+    font-family:Verdana, Arial,  Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#000;
+    margin-bottom: 10px;    
+}
+
+.my-container
+{
+    width: 605px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #3F3F41;
+    background-color: #fff;
+    line-height: 20px;
+    border-radius: 5px;
+    min-height: 200px;
+    margin-bottom:10px;
+}
+
+.my-content
+{
+    margin: 10px 10px 10px 10px;
+}
+
+.emlPgHeader
+{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;    
+    margin-bottom:5px;
+}
+
+.emlPgFooter
+{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px; 
+    color:#C0C0C0;    
+}
+
+.divTable
+{
+    display: table;
+    width: 520px;
+    background-color: #ffffff;
+    border: 1px solid #666666;
+    border-spacing: 1px;
+    border-radius: 5px; /*cellspacing:poor IE support for  this*/ /* border-collapse:separate;*/
+}
+
+.headRow
+{
+    display: table-row;
+    background-color: #5D5D5D;
+    color:#fff;
+    height: 19px;
+    font-weight: 300;
+    vertical-align: middle;
+    padding: 2px 2px 2px 2px;
+}
+
+.divRow
+{
+    display: table-row;
+    background-color: #fff;
+    width: auto;
+    height: 19px;
+    vertical-align: middle;
+    padding: 2px 2px 2px 2px;
+}
+
+.divAltRow
+{
+    display: table-row;
+    background-color: #E0E0E0;
+    width: auto;
+    height: 19px;
+    vertical-align: middle;
+    padding: 2px 2px 2px 2px;
+}
+
+.divCell1
+{
+    float: left; /*fix for  buggy browsers*/
+    display: table-column;
+    width: 350px;
+}
+.divCell2
+{
+    float: left; /*fix for  buggy browsers*/
+    display: table-column;
+    width: 75px;
+}
+.divCell3
+{
+    float: left; /*fix for  buggy browsers*/
+    display: table-column;
+    width: 120px;
+}
+.divCell4
+{
+    float: left; /*fix for  buggy browsers*/
+    display: table-column;
+    width: 50px;
+}

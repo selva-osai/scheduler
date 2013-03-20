@@ -1,0 +1,128 @@
+.htOverride
+{
+    height:auto;
+}
+
+#weeklystatuscroll
+{
+    /* Typical fixed height and fixed width example */
+    height: 400px;
+    width:555px;
+    overflow: auto; /* IE overflow fix, position must be relative or absolute*/
+    position: relative;
+    background-color: #E7EADE;
+    margin: 0.3em auto;
+    padding: 15px;
+}
+
+#regpgscroll
+{
+    /* Typical fixed height and fixed width example */
+    height: 550px;
+    width:650px;
+    overflow: auto; /* IE overflow fix, position must be relative or absolute*/
+    position: relative;
+    background-color: #E7EADE;
+    margin: 0.3em auto;
+    padding: 15px;
+}
+
+#emailscroll
+{
+    /* Typical fixed height and fixed width example */
+    height: 370px;
+    width:650px;
+    overflow: auto; /* IE overflow fix, position must be relative or absolute*/
+    position: relative;
+    margin: 0.3em auto;
+    padding: 15px;
+}
+
+#mycustomscroll
+{
+    /* Typical fixed height and fixed width example */
+    width: 300px;
+    height: 250px;
+    overflow: auto; /* IE overflow fix, position must be relative or absolute*/
+    position: relative;
+    background-color: #E7EADE;
+    margin: 0.3em auto;
+    padding: 15px;
+}
+
+#mycustomscroll2
+{
+    /* Typical fixed height and fixed width example */
+    width: 340px;
+    height: 250px;
+    overflow: scroll; /* IE overflow fix, position must be relative or absolute*/
+    position: relative;
+    background-color: #D5EADE;
+    margin: 0.3em auto;
+    padding: 15px;
+}
+
+#dvpresenter
+{
+    /* Typical fixed height and fixed width example */
+  
+    height: 300px;
+    overflow: auto; /* IE overflow fix, position must be relative or absolute*/
+    position: relative;
+    background-color: #D5EADE;
+    margin: 0.3em auto;
+    padding: 15px;
+}
+
+
+.fixedwidth
+{
+    width: 550px;
+    height: 500px;
+    position: relative;
+    color: black;
+    padding: 1px;
+}
+
+
+/*Scrolling Color and design start*/
+
+.scrollgeneric
+{
+    line-height: 1px;
+    font-size: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.vscrollerbase
+{
+    width: 5px;
+    background-color: #FFFFFF;
+}
+.vscrollerbar
+{
+    width: 5px;
+    background-color: #000000;
+}
+.hscrollerbase
+{
+    height: 5px;
+    background-color: #FFFFFF;
+}
+.hscrollerbar
+{
+    height: 10px;
+    background-color: #000000;
+}
+.scrollerjogbox
+{
+    width: 5px;
+    height: 5px;
+    top: auto;
+    left: auto;
+    bottom: 0px;
+    right: 0px;
+    background-color: gray;
+}

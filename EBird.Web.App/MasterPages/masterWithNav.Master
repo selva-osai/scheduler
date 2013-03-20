@@ -1,0 +1,217 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterWithNav.master.cs"
+    Inherits="EBird.Web.App.MasterPages.masterWithNav" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<%--    <meta http-equiv="refresh" content="1200;url=/default.aspx?exp=1" />--%>
+    <title>Schedule a Webinar</title>
+    <link id="Link1" href="/Styles/Style.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="../Styles/lte-ie-8.css" /><![endif]-->
+    <link id="Link2" href="/Styles/radStyle.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="/css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+<%--    <script type="text/javascript" src="/js/jqfontselector.js"></script>--%>
+    <script type="text/javascript" src="/js/jquery-ui-1.8.18.custom.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jQuery_UI1.js"></script>
+    <link id="Link3" href="/Styles/qtip.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="/js/jq.qtip.js"></script>
+    <script type="text/javascript">
+        // Window load event used just in case window height is dependant upon images
+        $(window).bind("load", function () {
+
+            var footerHeight = 0,
+           footerTop = 0,
+           $footer = $(".Footer");
+
+            positionFooter();
+
+            function positionFooter() {
+                footerHeight = $footer.height();
+                footerTop = ($(window).scrollTop() + $(window).height() - footerHeight) + "px";
+
+                if (($(document.body).height() + footerHeight) < $(window).height()) {
+                    $footer.css({
+                        position: "absolute"
+                    }).animate({
+                        top: footerTop
+                    }, -1)
+                } else {
+                    $footer.css({
+                        position: "static"
+                    })
+                }
+            }
+
+            $(window)
+               .scroll(positionFooter)
+               .resize(positionFooter)
+        });
+    </script>
+    <script type="text/javascript">
+        function RowMouseOver(sender, eventArgs) {
+            $get(eventArgs.get_id()).className += " RowMouseOver";
+        }
+
+        function RowMouseOut(sender, eventArgs) {
+            var row = $get(eventArgs.get_id());
+            row.className = row.className.replace("RowMouseOver", "RowMouseOut");
+        }
+    </script>
+</head>
+<body>
+    <!--Begin Container -->
+    <div class="Container">
+        <!--Begin Header -->
+        <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <%--    <telerik:RadScriptManager ID="RadScriptManager1" Runat="server">
+        </telerik:RadScriptManager>--%>
+        <div class="Header">
+            <div class="LPart">
+                <div class="Logo">
+                    <h1 class="logoAfterLogin">
+                        <img id="Img1" runat="server" src="~/Images/logo_low_case_Session1.png" alt="" border="0" /></h1>
+                </div>
+            </div>
+            <div class="RPart">
+                <div class="TopLinks">
+                    <ul>
+                        <li>
+                            <asp:Label ID="lblMyName" runat="server" Visible="true" Text="Michael Goodell" CssClass="genLabel"></asp:Label>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lbtnMyMoonshot" runat="server" Text="My Settings" Visible="true"
+                                CssClass="lnkBtn1a" OnClick="lbtnMyMoonshot_Click" CausesValidation="false" /></li>
+                        <li class="Last">
+                            <asp:LinkButton ID="lbtnLogout" Visible="true" runat="server" Text="Logout" OnClick="lbtnLogout_Click"
+                                CssClass="lnkBtn1a" CausesValidation="false" /></li>
+                    </ul>
+                </div>
+                <div class="Clr">
+                </div>
+                <div class="Date">
+                <asp:HiddenField ID="hDateFormat" runat="server" />
+                    <script type="text/javascript" language="javascript">
+                <!--                        Begin
+                        var months = new Array(13);
+                        months[1] = "January";
+                        months[2] = "February";
+                        months[3] = "March";
+                        months[4] = "April";
+                        months[5] = "May";
+                        months[6] = "June";
+                        months[7] = "July";
+                        months[8] = "August";
+                        months[9] = "September";
+                        months[10] = "October";
+                        months[11] = "November";
+                        months[12] = "December";
+
+                        var d = new Date();
+                        var weekday = new Array(7);
+                        weekday[0] = "Sunday";
+                        weekday[1] = "Monday";
+                        weekday[2] = "Tuesday";
+                        weekday[3] = "Wednesday";
+                        weekday[4] = "Thursday";
+                        weekday[5] = "Friday";
+                        weekday[6] = "Saturday";
+
+                        var time = new Date();
+                        var lmonth = months[time.getMonth() + 1];
+                        var date = time.getDate();
+                        var year = time.getYear();
+                        if (year < 2000)
+                            year = year + 1900;
+                        var dtFormat = document.getElementById('<%= hDateFormat.ClientID %>');
+
+                        if (dtFormat.value == null)
+                            document.write("<span class='genLabel'>" + weekday[d.getDay()] + ", " + lmonth + " " + date + " " + year + "</span>");
+                        else {
+                            if (dtFormat.value == 'dd-MM-yyyy')
+                                document.write("<span class='genLabel'>" + weekday[d.getDay()] + ", " + date + " " + lmonth + " " + year + "</span>");
+                            if (dtFormat.value == 'MM-dd-yyyy')
+                                document.write("<span class='genLabel'>" + weekday[d.getDay()] + ", " + lmonth + " " + date + " " + year + "</span>");
+                            if (dtFormat.value == 'yyyy-MM-dd')
+                                document.write("<span class='genLabel'>" + weekday[d.getDay()] + ", " + year + " " + lmonth + " " + date + "</span>");
+                        }
+
+                // End -->
+                    </script>
+                </div>
+                <div class="Clr">
+                </div>
+                <!--Begin Main Nav -->
+                <%--                <div class="MainNav">
+                    <ul>
+                        <li><a runat="server" id="lnkWeb" href="~/Pages/schedule.aspx">Webinars</a></li>
+                        <li><a runat="server" id="lnkRec" href="~/Pages/recWebinar.aspx">Recorded Webinars </a></li>
+                        <li><a runat="server" id="lnkMeet" href="~/Pages/meet.aspx">Meet Now</a></li>
+                        <li><a runat="server" id="lnkAnaly" href="~/Pages/analytics.aspx">Analytics</a></li>
+                    </ul>
+                </div>--%>
+                <!--End Main Nav -->
+            </div>
+        </div>
+        <!--End Header -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        </form>
+        <div class="Clr">
+        </div>
+        <!-- Start: Premium Feature qtip function -->
+            <div id="dvPreSS" style="display:none; height:300px">
+                My Snap Site Feature details
+            </div>
+            <div id="dvPreAR" style="display:none; height:300px">
+                Advance Registration Feature details
+            </div> 
+            <div id="dvPreWI" style="display:none; height:300px">
+                Webinar Invitation
+            </div> 
+            <div id="dvPreRU" style="display:none; height:300px">
+                Registrant Updates
+            </div> 
+            <script src="/qtip2/qtipPremiumFeaturefn.js" type="text/javascript" charset="utf-8"></script>
+            <script type="text/javascript">
+                //$(document).ready(function () {
+                    $('.spSS').click(function () {
+                        var contentString = $('#dvPreSS');
+                        qtipPremium('.spSS', contentString, 300, '.modalClose');
+                    });
+                //});
+                //$(document).ready(function () {
+                    $('.spAR').click(function () {
+                        var contentString = $('#dvPreAR');
+                        qtipPremium('.spAR', contentString, 300, '.modalClose');
+                    });
+                    $('.spWI').click(function () {
+                        var contentString = $('#dvPreWI');
+                        qtipPremium('.spWI', contentString, 300, '.modalClose');
+                    });
+                    $('.spRU').click(function () {
+                        var contentString = $('#dvPreRU');
+                        qtipPremium('.spRU', contentString, 300, '.modalClose');
+                    });
+                      
+                //});
+            </script>
+    <!-- End: Premium Feature qtip function -->
+    </div>
+    <!--End Container -->
+    <!--Begin Footer -->
+    <div class="FooterMain">
+        <div class="FootCont">
+            <div class="LPart">
+                © 2012 Snap Session</div>
+            <div class="RPart">
+                <a href="#">User Agreement</a> | <a href="#">Privacy Policy</a></div>
+        </div>
+    </div>
+    <!--End Footer -->
+</body>
+</html>

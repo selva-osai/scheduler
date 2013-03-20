@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/mbContainer.css" title="style" media="screen" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.metadata.js"></script>
+    <script type="text/javascript" src="js/mbContainer.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            function initDock(o, docID) {
+                if (o.hasClass("dock")) return;
+                var opt = o.get(0).options;
+                var docEl = $("<span>").attr("id", o.attr("id") + "_dock").css({ width: opt.dockedIconDim + 5, display: "inline-block" });
+                var icon = $("<img>").attr("src", opt.elementsPath + "icons/" + (o.attr("icon") ? o.attr("icon") : "restore.png")).css({ width: opt.dockedIconDim/*,height:opt.dockedIconDim*/, cursor: "pointer" });
+                icon.click(function () { o.mb_iconize() });
+                docEl.append(icon);
+                $("#" + docID).append(docEl);
+                o.attr("dock", o.attr("id") + "_dock");
+            }
+
+            function iconize(o) {
+                $("#" + o.attr("dock")).find("img:first").hide();
+            }
+            function restore(o) {
+                $("#" + o.attr("dock")).find("img:first").show();
+            }
+
+            $(".containerPlus").buildContainers({
+                containment: "document",
+                elementsPath: "images/",
+                dockedIconDim: 60,
+                onCreate: function (o) { initDock(o, "dock") },
+                onClose: function (o) { close(o) },
+                onRestore: function (o) { restore(o); },
+                onIconize: function (o) { iconize(o) },
+                onLoad: function (o) { }, //o.mb_centerOnWindow(false);
+                effectDuration: 200
+            });
+        });
+
+    </script>
+    <style type="text/css">
+        body
+        {
+            background: url("images/aprimo_72 pixel.png") #969696 no-repeat top center;
+        }
+        .wrapper
+        {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .wrapper h1
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+        #icon7
+        {
+            max-width: 700px;
+            max-height: 400px;
+        }
+    </style>
+    <style type="text/css">
+        .Clr
+        {
+            clear: both;
+        }
+        .Webi-Speaker
+        {
+            padding: 10px;
+            border: solid 1px #ccc;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .Profile .Pro-img
+        {
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+        .Profile .Pro-name
+        {
+            font-weight: bold;
+        }
+        .Profile .Pro-Desi
+        {
+            margin-bottom: 2px;
+            line-height: 21px;
+        }
+        .Profile .Pro-title
+        {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        .Pro-title h2
+        {
+            font-size: 12px;
+            margin-bottom: 10px;
+            font-family: verdana;
+            line-height: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="icon1" class="containerPlus draggable resizable {buttons:'i,m', icon:'LinkedIn.png', skin:'', width:'650',iconized:'true', dock:'dock', title:'LinkedIn'}"
+            style="position: fixed; top: 50px; left: 100px">
+            <img src="images/linkedIn.png" />
+        </div>
+        <div id="icon2" class="containerPlus draggable resizable {buttons:'i,m', icon:'MediaPlayer_1.png', skin:'', width:'610',iconized:'true', dock:'dock', title:'Media Player'}"
+            style="position: fixed; top: 100px; left: 150px">
+            <!-- Start EasyHtml5Video.com BODY section -->
+            <div id="easyhtml5video" style="position: relative; width: 640px; height: 360px;">
+                <video controls="controls" autoplay="autoplay" poster="index.files/html5video/Hollywood_Dolby_Theatre_Night.jpg"
+                    width="640" height="360" title="Hollywood Dolby Theatre Night">
+                    <source src="index.files/html5video/Hollywood_Dolby_Theatre_Night.m4v" type="video/mp4" />
+                    <source src="index.files/html5video/Hollywood_Dolby_Theatre_Night.webm" type="video/webm" />
+                    <source src="index.files/html5video/Hollywood_Dolby_Theatre_Night.ogv" type="video/ogg" />
+                    <object type="application/x-shockwave-flash" data="index.files/html5video/flashfox.swf"
+                        width="640" height="360" style="position: relative;">
+                        <param name="movie" value="index.files/html5video/flashfox.swf" />
+                        <param name="allowFullScreen" value="true" />
+                        <param name="flashVars" value="autoplay=true&amp;controls=true&amp;fullScreenEnabled=true&amp;posterOnEnd=true&amp;loop=false&amp;poster=index.files/html5video/Hollywood_Dolby_Theatre_Night.jpg&amp;src=Hollywood_Dolby_Theatre_Night.m4v" />
+                        <embed src="index.files/html5video/flashfox.swf" width="640" height="360" style="position: relative;"
+                            flashvars="autoplay=true&amp;controls=true&amp;fullScreenEnabled=true&amp;posterOnEnd=true&amp;loop=false&amp;poster=index.files/html5video/Hollywood_Dolby_Theatre_Night.jpg&amp;src=Hollywood_Dolby_Theatre_Night.m4v"
+                            allowfullscreen="true" wmode="transparent" type="application/x-shockwave-flash"
+                            pluginspage="http://www.adobe.com/go/getflashplayer_en" />
+                        <img alt="Hollywood Dolby Theatre Night" src="index.files/html5video/Hollywood_Dolby_Theatre_Night.jpg"
+                            style="position: absolute; left: 0;" width="640" height="360" title="Video playback is not supported by your browser" />
+                    </object>
+                </video>
+                <a style="display: none" href="http://easyhtml5video.com">host html5 video encoder by
+                    EasyHtml5Video.com v1.8</a></div>
+            <script src="index.files/html5video/html5ext.js" type="text/javascript"></script>
+            <!-- End EasyHtml5Video.com BODY section -->
+        </div>
+        <div id="icon3" class="containerPlus draggable resizable {buttons:'i,m', icon:'SlidesProjector_1.png', skin:'', width:'790',iconized:'true', dock:'dock', title:'Slides'}"
+            style="position: fixed; top: 200px; left: 200px; height: 600px;">
+            <img src="images/slide1.png" />
+        </div>
+        <div id="icon4" class="containerPlus draggable resizable {buttons:'i,m', icon:'Wiki.png', skin:'', width:'500',iconized:'true', dock:'dock', title:'Wikipedia'}"
+            style="position: fixed; top: 300px; left: 250px">
+            <table width="100%">
+                <tr>
+                    <td style="width: 20px;">
+                        <img src="images/w.png" />
+                    </td>
+                    <td>
+                        <input type="text" style="width: 320px; border: 1px solid #7f7f7f; height: 18px">&nbsp;<input
+                            type="button" value="Search" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div style="border: 1px solid #7f7f7f; height: 180px; margin-top: 0px; margin-bottom: 2px;">
+                            &nbsp;</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="icon5" class="containerPlus draggable resizable {buttons:'i,m', icon:'SpeakerBio_1.png', skin:'', width:'430',iconized:'true', dock:'dock', title:'Speaker Bio'}"
+            style="position: fixed; top: 300px; left: 500px">
+            <div class="Webi-Speaker">
+                <div class="Profile">
+                    <div class="Pro-title">
+                        <h2>
+                            Presenter</h2>
+                    </div>
+                    <div class="Pro-img">
+                        <img src="Images/brian-bio-125px.png" alt="" />
+                    </div>
+                    <div class="Pro-desc">
+                        <div class="Pro-name">
+                            Kenny Thompson
+                        </div>
+                        <div class="Pro-Desi">
+                            Senior Vice President<br />
+                            The Stratigic Corp.
+                        </div>
+                        <p>
+                            Kenny Thompson has served as our President, Chief Executive Officer and a member
+                            of our board of directors since September 2008, and as our Chairman since December
+                            2011. Prior to joining us, Mr. Kenny was with Hyperion Solutions Corporation, a
+                            performance management software company acquired by Oracle Corporation, from October
+                            2001 to April 2007, where he served in various executive roles, most recently as
+                            President and Chief Executive Officer and as a member of the board of directors
+                            from July 2004 until April 2007. Mr. Kenny has served as a member of the board of
+                            directors of Citrix Systems, Inc., an enterprise software company, since February
+                            2005 and Informatica Corporation, a data integration software provider, since January
+                            2008. Mr. Kenny holds a B.B.A. from Baylor University.
+                        </p>
+                    </div>
+                    <div class="Clr">
+                    </div>
+                </div>
+                <div class="Clr">
+                </div>
+            </div>
+        </div>
+        <div id="icon6" class="containerPlus draggable resizable {buttons:'i,m', icon:'Help.png', skin:'', width:'500',iconized:'true', dock:'dock', title:'Help'}"
+            style="position: fixed; top: 300px; left: 600px">
+            <table width="98%">
+                <tr>
+                    <td>
+                        <h2>
+                            Event Help Guide</h2>
+                        If you are experiencing problems viewing or listening to an event, please review
+                        the following minimum requirements and frequently asked questions.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            Minimum Requirements</h3>
+                        <ul>
+                            <li>Supported System Configurations</li>
+                            <li>Media Players </li>
+                            <li>Internet Browsers </li>
+                            <li>Internet Connection </li>
+                            <li>Cookies and JavaScript </li>
+                            <li>Java Virtual Machine </li>
+                        </ul>
+                        <h3>
+                            Test Your System</h3>
+                        <ul>
+                            <li>Click here to test your system if it meets the minimum requirements</li></ul>
+                        <h3>
+                            FAQs</h3>
+                        <ul>
+                            <li>The Audience URL in the confirmation email didn't work.</li>
+                            <li>I am prompted to register again even if I already registered for the event</li>
+                            <li>I keep receiving an error message stating that the form is missing information or
+                                I am entering an invalid e-mail address when I register.</li>
+                            <li>Can I access the event from a different computer than the one I registered from?</li>
+                            <li>I am asked for a password when I try to view the event</li>
+                            <li>I can't get back to the registration page!</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="icon7" class="containerPlus draggable resizable {buttons:'i,m', icon:'AskAQuestion_1.png', skin:'', width:'540',iconized:'true', dock:'dock', title:'Ask a Question'}"
+            style="position: fixed; top: 100px; left: 600px;">
+            <div style="border: 1px solid #7f7f7f; background-color: #efefef; height: 130px;
+                margin-top: 20px; margin-bottom: 10px;">
+                &nbsp;</div>
+            <div style="clear: both">
+            </div>
+            <textarea placeholder="Remember, be nice!" cols="50" rows="3"></textarea>&nbsp;&nbsp;<input
+                type="button" value="Submit" />
+            <br />
+            <br />
+            &nbsp;
+        </div>
+        <div id="dock">
+        </div>
+    </div>
+</body>
+</html>

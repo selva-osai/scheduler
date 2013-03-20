@@ -1,0 +1,59 @@
+﻿div.container
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+/* div.container
+{
+    width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+div.bioLeft
+{
+    float: left;
+    width: 375px;
+    margin: 0;
+    padding: 3px;
+}
+div.bioLeft1
+{
+    width: 400px !important;
+}
+div.bioRight
+{
+    margin-left: 380px;
+    padding: 3px 3px 0px 3px;
+}
+div.bioRight1
+{
+    margin-left: 450px !important;
+}
+
+div.bioReg
+{
+    background-color:#eaeaea;
+}
+
+div.bioAlternate
+{
+    background-color: #e0e0e0;
+}
+
+.fldLabel
+{
+    float: left;
+    width: 30%;
+    margin: 3px;
+    line-height: 26px;
+}
+.fldInput
+{
+    width: 70%;
+    margin: 3px;
+    line-height: 26px;
+}
+#dvHeding
+{
+    margin-bottom: 5px;
+}

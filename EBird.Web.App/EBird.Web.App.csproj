@@ -1,0 +1,1403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{607CAF48-03E8-473E-BF9B-75927F505967}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EBird.Web.App</RootNamespace>
+    <AssemblyName>EBird.Web.App</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.60623.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EBird.Web.App, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\EBird.Web.App.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorld.UI, Version=2.0.6.2393, Culture=neutral, PublicKeyToken=24d65337282035f2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\eWorld.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorld.UI.Compatibility, Version=2.0.6.2393, Culture=neutral, PublicKeyToken=24d65337282035f2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\eWorld.UI.Compatibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Microsoft.Office.Interop.PowerPoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <HintPath>..\EBird.Common\Dependent-Assemblies\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging">
+      <HintPath>..\EBird.Common\Dependent-Assemblies\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MySql.Data.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\MySql.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RichTextEditor, Version=1.0.3076.39377, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Telerik.Web.UI, Version=2012.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL" />
+    <Reference Include="WindowsBase">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\emailContent.aspx" />
+    <Content Include="CommonControls\UC_Spinner.ascx" />
+    <Content Include="css\carousel1.css" />
+    <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\ui-lightness\jquery-ui-1.8.18.custom.css" />
+    <Content Include="default.aspx" />
+    <Content Include="DocRepo\Clients\1\Logo\10_rs.jpg" />
+    <Content Include="DocRepo\Clients\1\Logo\11_rs.jpg" />
+    <Content Include="DocRepo\Clients\1\Logo\21_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\24_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\25_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\26_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\27_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\28_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\292166_407087999341535_1870101108_n.jpg" />
+    <Content Include="DocRepo\Clients\1\Logo\29_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\30_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\31_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\33_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\34_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\35_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\36_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\37_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\38_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\39_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\40_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\41_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\42_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\43_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\44_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\45_rs.png" />
+    <Content Include="DocRepo\Clients\1\Logo\6_rs.jpg" />
+    <Content Include="DocRepo\Clients\1\Logo\7_rs.jpg" />
+    <Content Include="DocRepo\Clients\1\Logo\banner1.PNG" />
+    <Content Include="DocRepo\Clients\1\Logo\banner2.png" />
+    <Content Include="DocRepo\Clients\1\Logo\banner3.png" />
+    <Content Include="DocRepo\Clients\1\Logo\Component_Content.png" />
+    <Content Include="DocRepo\Clients\1\Logo\Component_Group_Chat.png" />
+    <Content Include="DocRepo\Clients\1\Logo\fuel1.png" />
+    <Content Include="DocRepo\Clients\1\Logo\ho_logo.gif" />
+    <Content Include="DocRepo\Clients\1\Logo\loader.gif" />
+    <Content Include="DocRepo\Clients\1\Logo\logoAB.png" />
+    <Content Include="DocRepo\Clients\1\Logo\logoAE.png" />
+    <Content Include="DocRepo\Clients\1\Logo\logoAM.png" />
+    <Content Include="DocRepo\Clients\1\Logo\logoCA.png" />
+    <Content Include="DocRepo\Clients\1\Logo\QMLogos1.jpg" />
+    <Content Include="DocRepo\Clients\1\Logo\QMLogos2.jpg" />
+    <Content Include="DocRepo\Clients\1\Logo\QMLogos3.jpg" />
+    <Content Include="DocRepo\Clients\1\Logo\QMLogos4.jpg" />
+    <Content Include="DocRepo\Clients\1\Profile\292166_407087999341535_1870101108_n.jpg" />
+    <Content Include="DocRepo\Clients\1\Profile\brian-bio-125px.png" />
+    <Content Include="DocRepo\Clients\5\Logo\QMLogos1.jpg" />
+    <Content Include="DocRepo\Clients\5\Logo\QMLogos2.jpg" />
+    <Content Include="DocRepo\Clients\5\Logo\QMLogos3.jpg" />
+    <Content Include="DocRepo\Clients\5\Logo\QMLogos4.jpg" />
+    <Content Include="DocRepo\Common\blankVideoTN.png" />
+    <Content Include="DocRepo\Common\NoBanner.png" />
+    <Content Include="DocRepo\Common\NoDocs.png" />
+    <Content Include="DocRepo\Common\NoDocs1.png" />
+    <Content Include="DocRepo\Common\NoDocs2.png" />
+    <Content Include="DocRepo\Common\Nologo.png" />
+    <Content Include="DocRepo\Common\profileImg.png" />
+    <Content Include="DocRepo\Common\profileImgMissing.png" />
+    <Content Include="DocRepo\Profile\biologo.gif" />
+    <Content Include="DocRepo\Profile\profileImg.png" />
+    <Content Include="DocRepo\Profile\profileImgMissing.png" />
+    <Content Include="DocRepo\ReportCSS\rptCSS0.css" />
+    <Content Include="DocRepo\ReportCSS\dvTable600.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS1.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS2.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS3.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS4.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS5.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS6.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS7.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS8.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS9.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS91.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS92.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS93.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS94.css" />
+    <Content Include="DocRepo\ReportCSS\rptCSS95.css" />
+    <Content Include="editor\BasicTools.xml" />
+    <Content Include="editor\BasicTools2.xml" />
+    <Content Include="editor\FullTools.xml" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\ArrowWidgets.png" />
+    <Content Include="Images\BodyBg.gif" />
+    <Content Include="Images\CocaCola.jpg" />
+    <Content Include="Images\Components1\Ask_a_question_hand.png" />
+    <Content Include="Images\Components1\Ask_a_question_hand_w.png" />
+    <Content Include="Images\Components1\Briefcase.png" />
+    <Content Include="Images\Components1\Briefcase_w.png" />
+    <Content Include="Images\Components1\Download.png" />
+    <Content Include="Images\Components1\Download_w.png" />
+    <Content Include="Images\Components1\Email_a_ Friend.png" />
+    <Content Include="Images\Components1\Email_a_Friend_w.png" />
+    <Content Include="Images\Components1\Facebook.png" />
+    <Content Include="Images\Components1\Facebook_w.png" />
+    <Content Include="Images\Components1\Group_Chat.png" />
+    <Content Include="Images\Components1\Group_Chat_w.png" />
+    <Content Include="Images\Components1\LinkedIn.png" />
+    <Content Include="Images\Components1\LinkedIn_w.png" />
+    <Content Include="Images\Components1\Media_Player.png" />
+    <Content Include="Images\Components1\Media_Player_w.png" />
+    <Content Include="Images\Components1\Search.png" />
+    <Content Include="Images\Components1\Search_w.png" />
+    <Content Include="Images\Components1\Speaker_Bio_1.png" />
+    <Content Include="Images\Components1\Speaker_Bio_1_w.png" />
+    <Content Include="Images\Components1\Twitter.png" />
+    <Content Include="Images\Components1\Twitter_w.png" />
+    <Content Include="Images\Components1\Wiki.png" />
+    <Content Include="Images\Components1\Wiki_w.png" />
+    <Content Include="Images\Components\Component_Bing.png" />
+    <Content Include="Images\Components\Component_Content.png" />
+    <Content Include="Images\Components\Component_Email_Friend.png" />
+    <Content Include="Images\Components\Component_FB.png" />
+    <Content Include="Images\Components\Component_Google.png" />
+    <Content Include="Images\Components\Component_Group_Chat.png" />
+    <Content Include="Images\Components\Component_LinkedIN.png" />
+    <Content Include="Images\Components\Component_One_on_One_Chat.png" />
+    <Content Include="Images\Components\Component_QA.png" />
+    <Content Include="Images\Components\Component_SpeakerBio.png" />
+    <Content Include="Images\Components\Component_Tweeter.png" />
+    <Content Include="Images\Components\Component_Wiki.png" />
+    <Content Include="Images\Components\Media.png" />
+    <Content Include="Images\Component_Bing.png" />
+    <Content Include="Images\Component_Content.png" />
+    <Content Include="Images\Component_Email_Friend.png" />
+    <Content Include="Images\Component_FB.png" />
+    <Content Include="Images\Component_Google.png" />
+    <Content Include="Images\Component_Group_Chat.png" />
+    <Content Include="Images\Component_LinkedIN.png" />
+    <Content Include="Images\Component_One_on_One_Chat.png" />
+    <Content Include="Images\Component_QA.png" />
+    <Content Include="Images\Component_SpeakerBio.png" />
+    <Content Include="Images\Component_Tweeter.png" />
+    <Content Include="Images\Component_Wiki.png" />
+    <Content Include="Images\CrainDetroit.jpg" />
+    <Content Include="Images\EE_TIMES_ARM.jpg" />
+    <Content Include="Images\FooterBg.gif" />
+    <Content Include="Images\icons\icoAnalytics.gif" />
+    <Content Include="Images\IIA.jpg" />
+    <Content Include="Images\LinkBtnArrow.png" />
+    <Content Include="Images\LinkBtnBg.gif" />
+    <Content Include="Images\LPBtn.png" />
+    <Content Include="Images\MeetNow.png" />
+    <Content Include="Images\PageDemo.jpg" />
+    <Content Include="Images\Record.png" />
+    <Content Include="Images\RWidgets.gif" />
+    <Content Include="Images\RWidgetsBg.gif" />
+    <Content Include="Images\RWidgetsBott.gif" />
+    <Content Include="Images\Scheduler.png" />
+    <Content Include="Images\socweb.jpg" />
+    <Content Include="Images\WidgetsHead.gif" />
+    <Content Include="js\flexcroll.js" />
+    <Content Include="js\jqfontselector.css" />
+    <Content Include="js\jqfontselector.js" />
+    <Content Include="js\jquery-1.7.1.min.js" />
+    <Content Include="js\jquery-latest.js" />
+    <Content Include="js\jquery-spin.js" />
+    <Content Include="js\jquery-ui-1.8.18.custom.min.js" />
+    <Content Include="js\jquery.layout-latest.js" />
+    <Content Include="Pagelets\plAdditionalWebinar.ascx" />
+    <Content Include="Pagelets\plBanner.ascx" />
+    <Content Include="Pagelets\plConfirmation.ascx" />
+    <Content Include="Pagelets\plDateTime.ascx" />
+    <Content Include="Pagelets\plFooter.ascx" />
+    <Content Include="Pagelets\plLogos.ascx" />
+    <Content Include="Pagelets\plPowerBySS.ascx" />
+    <Content Include="Pagelets\plPreRegEmail.ascx" />
+    <Content Include="Pagelets\plPresenters.ascx" />
+    <Content Include="Pagelets\plRegForm.ascx" />
+    <Content Include="Pagelets\plSMTracker.ascx" />
+    <Content Include="Pagelets\plVideo1.ascx" />
+    <Content Include="Pagelets\plWebinarSummary.ascx" />
+    <Content Include="Pagelets\plWebinarTitle.ascx" />
+    <Content Include="Pages\accessdenied.aspx" />
+    <Content Include="Pages\Acct.aspx" />
+    <Content Include="Pages\Adminmgmt.aspx" />
+    <Content Include="Pages\AdvUserSearch.aspx" />
+    <Content Include="Pages\AdvWebinarSearch.aspx" />
+    <Content Include="Pages\Audit.aspx" />
+    <Content Include="Pages\chkLayout.aspx" />
+    <Content Include="Pages\clientConfig.aspx" />
+    <Content Include="Pages\clientInfo.aspx" />
+    <Content Include="Pages\analytics.aspx" />
+    <Content Include="Pages\CoCenter.aspx" />
+    <Content Include="Pages\popup\addAttribute.aspx" />
+    <Content Include="Pages\popup\ImageCroping1.aspx" />
+    <Content Include="Pages\registration_preview.aspx" />
+    <Content Include="Pages\getLogo.aspx" />
+    <Content Include="Pages\login.aspx" />
+    <Content Include="Pages\meet.aspx" />
+    <Content Include="Pages\myprofile.aspx" />
+    <Content Include="Pages\MySnapSite.aspx" />
+    <Content Include="Pages\mywebinars.aspx" />
+    <Content Include="Pages\popup\addPresenter.aspx" />
+    <Content Include="Pages\popup\addWebinar.aspx" />
+    <Content Include="Pages\popup\audiFeature_Bio.aspx" />
+    <Content Include="Pages\popup\audiFeature_Content.aspx" />
+    <Content Include="Pages\popup\audiFeature_Email.aspx" />
+    <Content Include="Pages\popup\audiFeature_FB.aspx" />
+    <Content Include="Pages\popup\audiFeature_LinkedIn.aspx" />
+    <Content Include="Pages\popup\audiFeature_Search.aspx" />
+    <Content Include="Pages\popup\audiFeature_Twitter.aspx" />
+    <Content Include="Pages\popup\audiFeature_Video.aspx" />
+    <Content Include="Pages\popup\ConfirmWebinarStatus.aspx" />
+    <Content Include="Pages\popup\DeleteWebinar.aspx" />
+    <Content Include="Pages\popup\EmailPreview.aspx" />
+    <Content Include="Pages\popup\ImageCroping.aspx" />
+    <Content Include="Pages\popup\Notification_EmailTpl.aspx" />
+    <Content Include="Pages\popup\PresenterContact.aspx" />
+    <Content Include="Pages\popup\previewTheme.aspx" />
+    <Content Include="Pages\popup\regThankYou.aspx" />
+    <Content Include="Pages\popup\statusUpdate_EmailTpl.aspx" />
+    <Content Include="Pages\popup\UC_DeleteWebinar.ascx" />
+    <Content Include="Pages\popup\webinarVideo.aspx" />
+    <Content Include="Pages\PreInterface.aspx" />
+    <Content Include="Pages\recycle.aspx" />
+    <Content Include="Pages\Registrants.aspx" />
+    <Content Include="Pages\Registration.aspx" />
+    <Content Include="Pages\Registration1.aspx" />
+    <Content Include="Pages\registration_new.aspx" />
+    <Content Include="Pages\Reports\popRpt.aspx" />
+    <Content Include="Pages\schedule.aspx" />
+    <Content Include="Pages\SnapSite.aspx" />
+    <Content Include="Pages\Subscription.aspx" />
+    <Content Include="Pages\ThemeBuild.aspx" />
+    <Content Include="Pages\Themelayout.aspx" />
+    <Content Include="Pages\uploadtest.aspx" />
+    <Content Include="Pages\UserAdmin.aspx" />
+    <Content Include="Pages\viewwebinarURLs.aspx" />
+    <Content Include="Pages\WaitingRoom.aspx" />
+    <Content Include="Pages\webinarAction.aspx" />
+    <Content Include="qtip2\qtipPassPolicy.js" />
+    <Content Include="qtip2\qtip_audi_click.js" />
+    <Content Include="qtip2\css\jq.qtip.css" />
+    <Content Include="qtip2\js\jq.qtip.js" />
+    <Content Include="qtip2\qtip_email_click.js" />
+    <Content Include="qtip2\qtip_webinarlist.js" />
+    <Content Include="qtip2\qtip_webinarlist_click.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery.password-strength.js" />
+    <Content Include="Scripts\jquery.password-strength.min.js" />
+    <Content Include="Scripts\jQuery_UI1.js" />
+    <Content Include="Styles\IE.htc" />
+    <Content Include="Styles\jquery-ui.css" />
+    <Content Include="Styles\layoutpreview.css" />
+    <Content Include="Styles\layout\layout2.css" />
+    <Content Include="Styles\layout\layout1.css" />
+    <Content Include="Styles\layout\theme0.css" />
+    <Content Include="Styles\layout\theme1.css" />
+    <Content Include="Styles\layout\theme2.css" />
+    <Content Include="Styles\layout\theme3.css" />
+    <Content Include="Styles\layout\theme4.css" />
+    <Content Include="Styles\layout\theme5.css" />
+    <Content Include="Styles\layout\theme6.css" />
+    <Content Include="Styles\layout\theme7.css" />
+    <Content Include="Styles\layout\theme8.css" />
+    <Content Include="Styles\layout\theme9.css" />
+    <Content Include="Styles\layout\theme91.css" />
+    <Content Include="Styles\layout\theme92.css" />
+    <Content Include="Styles\layout\theme93.css" />
+    <Content Include="Styles\layout\theme94.css" />
+    <Content Include="Styles\layout\theme95.css" />
+    <Content Include="Styles\layout\ThemeGen.css" />
+    <Content Include="Styles\lte-ie-8.css" />
+    <Content Include="Styles\newStyle1.css" />
+    <Content Include="Styles\popUpWinStyle.css" />
+    <Content Include="Styles\qtip.css" />
+    <Content Include="Styles\radStyle.css" />
+    <Content Include="Styles\RTEditor.css" />
+    <Content Include="Styles\Style.css" />
+    <Content Include="Styles\ThemeStyle.css" />
+    <Content Include="UserControls\acctSettings.ascx" />
+    <Content Include="UserControls\AddWebinar.ascx" />
+    <Content Include="UserControls\analytics.ascx" />
+    <Content Include="UserControls\audit.ascx" />
+    <Content Include="UserControls\clientConfigList.ascx" />
+    <Content Include="UserControls\clientList.ascx" />
+    <Content Include="UserControls\confArtifacts.ascx" />
+    <Content Include="UserControls\ssadmin.ascx" />
+    <Content Include="UserControls\mywebinarlist.ascx" />
+    <Content Include="UserControls\presentationWS.ascx" />
+    <Content Include="UserControls\profile.ascx" />
+    <Content Include="UserControls\registrantList.ascx" />
+    <Content Include="UserControls\schLPart.ascx" />
+    <Content Include="UserControls\schMeeting.ascx" />
+    <Content Include="UserControls\subscription.ascx" />
+    <Content Include="UserControls\Theme.ascx" />
+    <Content Include="UserControls\userAdmin.ascx" />
+    <Content Include="UserControls\webaction.ascx" />
+    <Content Include="UserControls\webAudience.ascx" />
+    <Content Include="UserControls\webEmail.ascx" />
+    <Content Include="UserControls\webRegistration.ascx" />
+    <Content Include="UserControls\webTheme.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\emailContent.aspx.cs">
+      <DependentUpon>emailContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\emailContent.aspx.designer.cs">
+      <DependentUpon>emailContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppClass\SSDocuments.cs" />
+    <Compile Include="CommonControls\UC_Spinner.ascx.cs">
+      <DependentUpon>UC_Spinner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonControls\UC_Spinner.ascx.designer.cs">
+      <DependentUpon>UC_Spinner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="handler\CropUpload.ashx.cs">
+      <DependentUpon>CropUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\imageResized.ashx.cs">
+      <DependentUpon>imageResized.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\MyProfilePhoto.ashx.cs">
+      <DependentUpon>MyProfilePhoto.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\showImage.ashx.cs">
+      <DependentUpon>showImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\VideoHandler.ashx.cs">
+      <DependentUpon>VideoHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\VideoUploadT1.ashx.cs">
+      <DependentUpon>VideoUploadT1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\BlankMaster.Master.cs">
+      <DependentUpon>BlankMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\BlankMaster.Master.designer.cs">
+      <DependentUpon>BlankMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\mainMaster.Master.cs">
+      <DependentUpon>mainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\mainMaster.Master.designer.cs">
+      <DependentUpon>mainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\masterFullScreen.Master.cs">
+      <DependentUpon>masterFullScreen.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\masterFullScreen.Master.designer.cs">
+      <DependentUpon>masterFullScreen.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\masterWithNav.Master.cs">
+      <DependentUpon>masterWithNav.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\masterWithNav.Master.designer.cs">
+      <DependentUpon>masterWithNav.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\placeHolder.Master.cs">
+      <DependentUpon>placeHolder.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\placeHolder.Master.designer.cs">
+      <DependentUpon>placeHolder.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\popupMaster.Master.cs">
+      <DependentUpon>popupMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\popupMaster.Master.designer.cs">
+      <DependentUpon>popupMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\PreviewLayout.Master.cs">
+      <DependentUpon>PreviewLayout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\PreviewLayout.Master.designer.cs">
+      <DependentUpon>PreviewLayout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plAdditionalWebinar.ascx.cs">
+      <DependentUpon>plAdditionalWebinar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plAdditionalWebinar.ascx.designer.cs">
+      <DependentUpon>plAdditionalWebinar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plBanner.ascx.cs">
+      <DependentUpon>plBanner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plBanner.ascx.designer.cs">
+      <DependentUpon>plBanner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plConfirmation.ascx.cs">
+      <DependentUpon>plConfirmation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plConfirmation.ascx.designer.cs">
+      <DependentUpon>plConfirmation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plDateTime.ascx.cs">
+      <DependentUpon>plDateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plDateTime.ascx.designer.cs">
+      <DependentUpon>plDateTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plFooter.ascx.cs">
+      <DependentUpon>plFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plFooter.ascx.designer.cs">
+      <DependentUpon>plFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plLogos.ascx.cs">
+      <DependentUpon>plLogos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plLogos.ascx.designer.cs">
+      <DependentUpon>plLogos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plPowerBySS.ascx.cs">
+      <DependentUpon>plPowerBySS.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plPowerBySS.ascx.designer.cs">
+      <DependentUpon>plPowerBySS.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plPreRegEmail.ascx.cs">
+      <DependentUpon>plPreRegEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plPreRegEmail.ascx.designer.cs">
+      <DependentUpon>plPreRegEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plPresenters.ascx.cs">
+      <DependentUpon>plPresenters.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plPresenters.ascx.designer.cs">
+      <DependentUpon>plPresenters.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plRegForm.ascx.cs">
+      <DependentUpon>plRegForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plRegForm.ascx.designer.cs">
+      <DependentUpon>plRegForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plSMTracker.ascx.cs">
+      <DependentUpon>plSMTracker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plSMTracker.ascx.designer.cs">
+      <DependentUpon>plSMTracker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plVideo1.ascx.cs">
+      <DependentUpon>plVideo1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plVideo1.ascx.designer.cs">
+      <DependentUpon>plVideo1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plWebinarSummary.ascx.cs">
+      <DependentUpon>plWebinarSummary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plWebinarSummary.ascx.designer.cs">
+      <DependentUpon>plWebinarSummary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagelets\plWebinarTitle.ascx.cs">
+      <DependentUpon>plWebinarTitle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagelets\plWebinarTitle.ascx.designer.cs">
+      <DependentUpon>plWebinarTitle.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\accessdenied.aspx.cs">
+      <DependentUpon>accessdenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\accessdenied.aspx.designer.cs">
+      <DependentUpon>accessdenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Acct.aspx.cs">
+      <DependentUpon>Acct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Acct.aspx.designer.cs">
+      <DependentUpon>Acct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Adminmgmt.aspx.cs">
+      <DependentUpon>Adminmgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Adminmgmt.aspx.designer.cs">
+      <DependentUpon>Adminmgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdvUserSearch.aspx.cs">
+      <DependentUpon>AdvUserSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AdvUserSearch.aspx.designer.cs">
+      <DependentUpon>AdvUserSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdvWebinarSearch.aspx.cs">
+      <DependentUpon>AdvWebinarSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AdvWebinarSearch.aspx.designer.cs">
+      <DependentUpon>AdvWebinarSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Audit.aspx.cs">
+      <DependentUpon>Audit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Audit.aspx.designer.cs">
+      <DependentUpon>Audit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\chkLayout.aspx.cs">
+      <DependentUpon>chkLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\chkLayout.aspx.designer.cs">
+      <DependentUpon>chkLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\clientConfig.aspx.cs">
+      <DependentUpon>clientConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\clientConfig.aspx.designer.cs">
+      <DependentUpon>clientConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\clientInfo.aspx.cs">
+      <DependentUpon>clientInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\clientInfo.aspx.designer.cs">
+      <DependentUpon>clientInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\analytics.aspx.cs">
+      <DependentUpon>analytics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\analytics.aspx.designer.cs">
+      <DependentUpon>analytics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CoCenter.aspx.cs">
+      <DependentUpon>CoCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CoCenter.aspx.designer.cs">
+      <DependentUpon>CoCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\addAttribute.aspx.cs">
+      <DependentUpon>addAttribute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\addAttribute.aspx.designer.cs">
+      <DependentUpon>addAttribute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\ImageCroping1.aspx.cs">
+      <DependentUpon>ImageCroping1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\ImageCroping1.aspx.designer.cs">
+      <DependentUpon>ImageCroping1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\registration_preview.aspx.cs">
+      <DependentUpon>registration_preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\registration_preview.aspx.designer.cs">
+      <DependentUpon>registration_preview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\getLogo.aspx.cs">
+      <DependentUpon>getLogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\getLogo.aspx.designer.cs">
+      <DependentUpon>getLogo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\meet.aspx.cs">
+      <DependentUpon>meet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\meet.aspx.designer.cs">
+      <DependentUpon>meet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\myprofile.aspx.cs">
+      <DependentUpon>myprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\myprofile.aspx.designer.cs">
+      <DependentUpon>myprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MySnapSite.aspx.cs">
+      <DependentUpon>MySnapSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MySnapSite.aspx.designer.cs">
+      <DependentUpon>MySnapSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\mywebinars.aspx.cs">
+      <DependentUpon>mywebinars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\mywebinars.aspx.designer.cs">
+      <DependentUpon>mywebinars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\addPresenter.aspx.cs">
+      <DependentUpon>addPresenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\addPresenter.aspx.designer.cs">
+      <DependentUpon>addPresenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\addWebinar.aspx.cs">
+      <DependentUpon>addWebinar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\addWebinar.aspx.designer.cs">
+      <DependentUpon>addWebinar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Bio.aspx.cs">
+      <DependentUpon>audiFeature_Bio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Bio.aspx.designer.cs">
+      <DependentUpon>audiFeature_Bio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Content.aspx.cs">
+      <DependentUpon>audiFeature_Content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Content.aspx.designer.cs">
+      <DependentUpon>audiFeature_Content.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Email.aspx.cs">
+      <DependentUpon>audiFeature_Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Email.aspx.designer.cs">
+      <DependentUpon>audiFeature_Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_FB.aspx.cs">
+      <DependentUpon>audiFeature_FB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_FB.aspx.designer.cs">
+      <DependentUpon>audiFeature_FB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_LinkedIn.aspx.cs">
+      <DependentUpon>audiFeature_LinkedIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_LinkedIn.aspx.designer.cs">
+      <DependentUpon>audiFeature_LinkedIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Search.aspx.cs">
+      <DependentUpon>audiFeature_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Search.aspx.designer.cs">
+      <DependentUpon>audiFeature_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Twitter.aspx.cs">
+      <DependentUpon>audiFeature_Twitter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Twitter.aspx.designer.cs">
+      <DependentUpon>audiFeature_Twitter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Video.aspx.cs">
+      <DependentUpon>audiFeature_Video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\audiFeature_Video.aspx.designer.cs">
+      <DependentUpon>audiFeature_Video.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\ConfirmWebinarStatus.aspx.cs">
+      <DependentUpon>ConfirmWebinarStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\ConfirmWebinarStatus.aspx.designer.cs">
+      <DependentUpon>ConfirmWebinarStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\DeleteWebinar.aspx.cs">
+      <DependentUpon>DeleteWebinar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\DeleteWebinar.aspx.designer.cs">
+      <DependentUpon>DeleteWebinar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\EmailPreview.aspx.cs">
+      <DependentUpon>EmailPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\EmailPreview.aspx.designer.cs">
+      <DependentUpon>EmailPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\ImageCroping.aspx.cs">
+      <DependentUpon>ImageCroping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\ImageCroping.aspx.designer.cs">
+      <DependentUpon>ImageCroping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\Notification_EmailTpl.aspx.cs">
+      <DependentUpon>Notification_EmailTpl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\Notification_EmailTpl.aspx.designer.cs">
+      <DependentUpon>Notification_EmailTpl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\PresenterContact.aspx.cs">
+      <DependentUpon>PresenterContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\PresenterContact.aspx.designer.cs">
+      <DependentUpon>PresenterContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\previewTheme.aspx.cs">
+      <DependentUpon>previewTheme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\previewTheme.aspx.designer.cs">
+      <DependentUpon>previewTheme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\regThankYou.aspx.cs">
+      <DependentUpon>regThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\regThankYou.aspx.designer.cs">
+      <DependentUpon>regThankYou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\statusUpdate_EmailTpl.aspx.cs">
+      <DependentUpon>statusUpdate_EmailTpl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\statusUpdate_EmailTpl.aspx.designer.cs">
+      <DependentUpon>statusUpdate_EmailTpl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\UC_DeleteWebinar.ascx.cs">
+      <DependentUpon>UC_DeleteWebinar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\UC_DeleteWebinar.ascx.designer.cs">
+      <DependentUpon>UC_DeleteWebinar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\popup\webinarVideo.aspx.cs">
+      <DependentUpon>webinarVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\popup\webinarVideo.aspx.designer.cs">
+      <DependentUpon>webinarVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PreInterface.aspx.cs">
+      <DependentUpon>PreInterface.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PreInterface.aspx.designer.cs">
+      <DependentUpon>PreInterface.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\recycle.aspx.cs">
+      <DependentUpon>recycle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\recycle.aspx.designer.cs">
+      <DependentUpon>recycle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Registrants.aspx.cs">
+      <DependentUpon>Registrants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Registrants.aspx.designer.cs">
+      <DependentUpon>Registrants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Registration1.aspx.cs">
+      <DependentUpon>Registration1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Registration1.aspx.designer.cs">
+      <DependentUpon>Registration1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\registration_new.aspx.cs">
+      <DependentUpon>registration_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\registration_new.aspx.designer.cs">
+      <DependentUpon>registration_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reports\popRpt.aspx.cs">
+      <DependentUpon>popRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Reports\popRpt.aspx.designer.cs">
+      <DependentUpon>popRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\schedule.aspx.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\schedule.aspx.designer.cs">
+      <DependentUpon>schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SnapSite.aspx.cs">
+      <DependentUpon>SnapSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SnapSite.aspx.designer.cs">
+      <DependentUpon>SnapSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Subscription.aspx.cs">
+      <DependentUpon>Subscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Subscription.aspx.designer.cs">
+      <DependentUpon>Subscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ThemeBuild.aspx.cs">
+      <DependentUpon>ThemeBuild.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ThemeBuild.aspx.designer.cs">
+      <DependentUpon>ThemeBuild.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Themelayout.aspx.cs">
+      <DependentUpon>Themelayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Themelayout.aspx.designer.cs">
+      <DependentUpon>Themelayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\uploadtest.aspx.cs">
+      <DependentUpon>uploadtest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\uploadtest.aspx.designer.cs">
+      <DependentUpon>uploadtest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserAdmin.aspx.cs">
+      <DependentUpon>UserAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UserAdmin.aspx.designer.cs">
+      <DependentUpon>UserAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\viewwebinarURLs.aspx.cs">
+      <DependentUpon>viewwebinarURLs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\viewwebinarURLs.aspx.designer.cs">
+      <DependentUpon>viewwebinarURLs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WaitingRoom.aspx.cs">
+      <DependentUpon>WaitingRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WaitingRoom.aspx.designer.cs">
+      <DependentUpon>WaitingRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\webinarAction.aspx.cs">
+      <DependentUpon>webinarAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\webinarAction.aspx.designer.cs">
+      <DependentUpon>webinarAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\acctSettings.ascx.cs">
+      <DependentUpon>acctSettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\acctSettings.ascx.designer.cs">
+      <DependentUpon>acctSettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AddWebinar.ascx.cs">
+      <DependentUpon>AddWebinar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\AddWebinar.ascx.designer.cs">
+      <DependentUpon>AddWebinar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\analytics.ascx.cs">
+      <DependentUpon>analytics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\analytics.ascx.designer.cs">
+      <DependentUpon>analytics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\audit.ascx.cs">
+      <DependentUpon>audit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\audit.ascx.designer.cs">
+      <DependentUpon>audit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\clientConfigList.ascx.cs">
+      <DependentUpon>clientConfigList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\clientConfigList.ascx.designer.cs">
+      <DependentUpon>clientConfigList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\clientList.ascx.cs">
+      <DependentUpon>clientList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\clientList.ascx.designer.cs">
+      <DependentUpon>clientList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\confArtifacts.ascx.cs">
+      <DependentUpon>confArtifacts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\confArtifacts.ascx.designer.cs">
+      <DependentUpon>confArtifacts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ssadmin.ascx.cs">
+      <DependentUpon>ssadmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ssadmin.ascx.designer.cs">
+      <DependentUpon>ssadmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\mywebinarlist.ascx.cs">
+      <DependentUpon>mywebinarlist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\mywebinarlist.ascx.designer.cs">
+      <DependentUpon>mywebinarlist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\presentationWS.ascx.cs">
+      <DependentUpon>presentationWS.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\presentationWS.ascx.designer.cs">
+      <DependentUpon>presentationWS.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\profile.ascx.cs">
+      <DependentUpon>profile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\profile.ascx.designer.cs">
+      <DependentUpon>profile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\registrantList.ascx.cs">
+      <DependentUpon>registrantList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\registrantList.ascx.designer.cs">
+      <DependentUpon>registrantList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\schLPart.ascx.cs">
+      <DependentUpon>schLPart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\schLPart.ascx.designer.cs">
+      <DependentUpon>schLPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\schMeeting.ascx.cs">
+      <DependentUpon>schMeeting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\schMeeting.ascx.designer.cs">
+      <DependentUpon>schMeeting.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\subscription.ascx.cs">
+      <DependentUpon>subscription.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\subscription.ascx.designer.cs">
+      <DependentUpon>subscription.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Theme.ascx.cs">
+      <DependentUpon>Theme.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Theme.ascx.designer.cs">
+      <DependentUpon>Theme.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\userAdmin.ascx.cs">
+      <DependentUpon>userAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\userAdmin.ascx.designer.cs">
+      <DependentUpon>userAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\webaction.ascx.cs">
+      <DependentUpon>webaction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\webaction.ascx.designer.cs">
+      <DependentUpon>webaction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\webAudience.ascx.cs">
+      <DependentUpon>webAudience.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\webAudience.ascx.designer.cs">
+      <DependentUpon>webAudience.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\webEmail.ascx.cs">
+      <DependentUpon>webEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\webEmail.ascx.designer.cs">
+      <DependentUpon>webEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\webRegistration.ascx.cs">
+      <DependentUpon>webRegistration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\webRegistration.ascx.designer.cs">
+      <DependentUpon>webRegistration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\webTheme.ascx.cs">
+      <DependentUpon>webTheme.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\webTheme.ascx.designer.cs">
+      <DependentUpon>webTheme.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_GlobalResources\" />
+    <Folder Include="DocRepo\Clients\10\Logo\" />
+    <Folder Include="DocRepo\Clients\10\Profile\" />
+    <Folder Include="DocRepo\Clients\10\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\11\Logo\" />
+    <Folder Include="DocRepo\Clients\11\Profile\" />
+    <Folder Include="DocRepo\Clients\11\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\12\Logo\" />
+    <Folder Include="DocRepo\Clients\12\Profile\" />
+    <Folder Include="DocRepo\Clients\12\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\13\Logo\" />
+    <Folder Include="DocRepo\Clients\13\Profile\" />
+    <Folder Include="DocRepo\Clients\13\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\14\Logo\" />
+    <Folder Include="DocRepo\Clients\14\Profile\" />
+    <Folder Include="DocRepo\Clients\14\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\15\Logo\" />
+    <Folder Include="DocRepo\Clients\15\Profile\" />
+    <Folder Include="DocRepo\Clients\15\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\16\Logo\" />
+    <Folder Include="DocRepo\Clients\16\Profile\" />
+    <Folder Include="DocRepo\Clients\16\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\17\Logo\" />
+    <Folder Include="DocRepo\Clients\17\Profile\" />
+    <Folder Include="DocRepo\Clients\17\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\18\Logo\" />
+    <Folder Include="DocRepo\Clients\18\Profile\" />
+    <Folder Include="DocRepo\Clients\18\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\19\Logo\" />
+    <Folder Include="DocRepo\Clients\19\Profile\" />
+    <Folder Include="DocRepo\Clients\19\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\1\temp\" />
+    <Folder Include="DocRepo\Clients\20\Logo\" />
+    <Folder Include="DocRepo\Clients\20\Profile\" />
+    <Folder Include="DocRepo\Clients\20\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\21\Logo\" />
+    <Folder Include="DocRepo\Clients\21\Profile\" />
+    <Folder Include="DocRepo\Clients\21\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\2\Logo\" />
+    <Folder Include="DocRepo\Clients\2\Profile\" />
+    <Folder Include="DocRepo\Clients\2\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\3\Logo\" />
+    <Folder Include="DocRepo\Clients\3\Profile\" />
+    <Folder Include="DocRepo\Clients\3\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\4\Logo\" />
+    <Folder Include="DocRepo\Clients\4\Profile\" />
+    <Folder Include="DocRepo\Clients\4\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\5\Profile\" />
+    <Folder Include="DocRepo\Clients\5\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\6\Logo\" />
+    <Folder Include="DocRepo\Clients\6\Profile\" />
+    <Folder Include="DocRepo\Clients\6\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\7\Logo\" />
+    <Folder Include="DocRepo\Clients\7\Profile\" />
+    <Folder Include="DocRepo\Clients\7\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\8\Logo\" />
+    <Folder Include="DocRepo\Clients\8\Profile\" />
+    <Folder Include="DocRepo\Clients\8\WebinarDocs\" />
+    <Folder Include="DocRepo\Clients\9\Logo\" />
+    <Folder Include="DocRepo\Clients\9\Profile\" />
+    <Folder Include="DocRepo\Clients\9\WebinarDocs\" />
+    <Folder Include="DocRepo\Common\logs\" />
+    <Folder Include="DocRepo\WebinarDocs\" />
+    <Folder Include="External\" />
+    <Folder Include="Images\layout\" />
+    <Folder Include="Pages\admin\" />
+    <Folder Include="PrensentationDocs\11231\" />
+    <Folder Include="Styles\Fiat\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\mainMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\masterWithNav.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EBird.BusinessLayer\EBird.BusinessObject.csproj">
+      <Project>{5D878C3A-56CA-4348-933E-80F363EF4DAF}</Project>
+      <Name>EBird.BusinessObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EBird.Common\EBird.Common.csproj">
+      <Project>{B7B3F61A-A877-4944-8380-CDAA624A81B1}</Project>
+      <Name>EBird.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EBird.DataAccess\EBird.DataAccess.csproj">
+      <Project>{001324BC-4EA4-478A-8C3E-23C810E38536}</Project>
+      <Name>EBird.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EBird.DocRepo\EBird.DocRepo.csproj">
+      <Project>{CD83B483-FC3E-443E-9101-19E05444D91C}</Project>
+      <Name>EBird.DocRepo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EBird.Email\EBird.Email.csproj">
+      <Project>{A46DE69E-19C9-4F9C-8E39-57968B3E8C9F}</Project>
+      <Name>EBird.Email</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EBird.Framework\EBird.Framework.csproj">
+      <Project>{8A24DC20-C44E-4EC5-8836-C79168CA5173}</Project>
+      <Name>EBird.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EBird.Report\EBird.Report.csproj">
+      <Project>{4B3A73E4-BB48-482A-92EC-41E30938569B}</Project>
+      <Name>EBird.Report</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\masterFullScreen.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\BlankMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handler\MyProfilePhoto.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handler\showImage.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handler\VideoHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handler\VideoUploadT1.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\popupMaster.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handler\imageResized.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\PreviewLayout.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\placeHolder.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DocRepo\Clients\1\Logo\carosel_feedback.pptx" />
+    <None Include="DocRepo\Clients\1\Logo\ConferencingDetails.pptx" />
+    <None Include="DocRepo\Clients\1\Logo\test1.pptx" />
+    <None Include="DocRepo\Clients\1\WebinarDocs\test2.pptx" />
+    <None Include="DocRepo\Templates\AttendeeFollowup.tpl" />
+    <None Include="DocRepo\Templates\EmailFooter.tpl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DocRepo\Templates\EmailHeader.tpl" />
+    <None Include="DocRepo\Templates\Invitation.tpl" />
+    <None Include="DocRepo\Templates\NonAttendeeFollowup.tpl" />
+    <None Include="DocRepo\Templates\PresenterContact.tpl" />
+    <None Include="DocRepo\Templates\refConfirm.tpl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DocRepo\Templates\referExist.tpl" />
+    <None Include="DocRepo\Templates\reminderEmail.tpl" />
+    <None Include="DocRepo\Templates\sysReq.tpl" />
+    <None Include="DocRepo\Templates\WebinarCampTrackEmail.tpl" />
+    <None Include="DocRepo\Templates\WebinarInvitation.tpl" />
+    <None Include="DocRepo\Templates\weeklyStatusReportEmail.tpl" />
+    <Content Include="handler\CropUpload.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\schWebinar.es-us.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62744</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

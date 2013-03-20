@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mainMaster.master.cs"
+    Inherits="EBird.Web.App.MasterPages.mainMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to Snap Session</title>
+    <link href="http://www.flstest40.com.asp1-21.dfw1-1.websitetestlink.com/EBDEV/Styles/Style.css"
+        rel="stylesheet" type="text/css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="http://www.flstest40.com.asp1-21.dfw1-1.websitetestlink.com/EBDEV/Styles/lte-ie-8.css" /><![endif]-->
+    <style type="text/css">
+        .float
+        {
+            position: absolute;
+            top: 300px;
+            left: 250px;
+            border: 1px solid red;
+        }
+    </style>
+    <script type="text/javascript">
+        function floatdiv() {
+            if (navigator.userAgent.toUpperCase().indexOf("FIREFOX") >= 0 || navigator.userAgent.toUpperCase().indexOf("CHROME") >= 0) {
+                document.getElementById('dvfloat').style.left = (parseInt(document.getElementById('dvimage').offsetLeft) - 200).toString() + 'px'; //1186
+                document.getElementById('dvfloat').style.top = (parseInt(document.getElementById('dvimage').offsetTop) + 60).toString() + 'px'; //61
+            }
+            else {
+                if (document.getElementById('dvfloat').style.visibility == 'hidden') {
+                    document.getElementById('dvfloat').style.visibility = 'visible';
+                    document.getElementById('dvfloat').style.left = (parseInt(document.getElementById('dvimage').offsetLeft) - 180).toString() + 'px'; //1186
+                    document.getElementById('dvfloat').style.top = (parseInt(document.getElementById('dvimage').offsetTop) + 60).toString() + 'px'; //61
+                }
+                else {
+                    document.getElementById('dvfloat').style.visibility = 'hidden';
+                }
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <!--Begin Container -->
+    <div class="Container">
+        <!--Begin Header -->
+        <form id="form1" runat="server">
+        <div class="Header">
+            <div class="LPart">
+                <div class="Logo">
+                    <h1>
+                        <a runat="server" id="home" href="~/default.aspx">Snap Session</a></h1>
+                </div>
+            </div>
+            <div class="RPart">
+                <div>
+                    <ul>
+                        <li>
+                            <div style="float: right;" id="dvimage">
+                                <asp:LinkButton ID="lbtnLogin" Visible="true" OnClientClick="return floatdiv();"
+                                    runat="server" Text="Login" OnClick="lbtnLogin_Click" />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="float" id="dvfloat" style="visibility: hidden;">
+                    <table width="300" bgcolor="#e4e4e4">
+                        <tr>
+                            <td valign="middle" align="center" colspan="2">
+                                <h2 style="margin: 0; padding: 0; font-size: 114%; color: #333; height:25px; background-color:#FFC6B3">
+                                    Sign in to Snap Session</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="50">&nbsp;</td>
+                            <td><br />
+                                Snap Session ID<br />
+                                <asp:TextBox ID="txtUserName" runat="server" Height="21" Width="150"></asp:TextBox>
+                                <br />&nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                Password<br />
+                                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Height="21" Width="150"></asp:TextBox>
+                                <br />&nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td style="height: 30px" valign="middle">
+                                <asp:LinkButton CssClass="SubBtn" ID="btnLogin" runat="server" Text="Sign In" OnClick="btnLogin_Click"></asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td style="height: 28px">
+                                &nbsp;<asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="Clr">
+                </div>
+                <br />
+                <div class="Date">
+                    <script type="text/javascript" language="javascript">
+                <!--                        Begin
+                        var months = new Array(13);
+                        months[1] = "January";
+                        months[2] = "February";
+                        months[3] = "March";
+                        months[4] = "April";
+                        months[5] = "May";
+                        months[6] = "June";
+                        months[7] = "July";
+                        months[8] = "August";
+                        months[9] = "September";
+                        months[10] = "October";
+                        months[11] = "November";
+                        months[12] = "December";
+
+                        var d = new Date();
+                        var weekday = new Array(7);
+                        weekday[0] = "Sunday";
+                        weekday[1] = "Monday";
+                        weekday[2] = "Tuesday";
+                        weekday[3] = "Wednesday";
+                        weekday[4] = "Thursday";
+                        weekday[5] = "Friday";
+                        weekday[6] = "Saturday";
+
+                        var time = new Date();
+                        var lmonth = months[time.getMonth() + 1];
+                        var date = time.getDate();
+                        var year = time.getYear();
+                        if (year < 2000)
+                            year = year + 1900;
+                        document.write(weekday[d.getDay()] + ", " +lmonth + " " + date + ", " + year);
+                // End -->
+                    </script>
+                </div>
+                <div class="Clr">
+                </div>
+            </div>
+        </div>
+        <!--End Header -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        </form>
+    </div>
+    <!--End Container -->
+    <!--Begin Footer -->
+    <div class="Footer">
+        <div class="FootCont">
+            <div class="LPart">
+                © 2012 Snap Session</div>
+            <div class="RPart">
+                <a href="#">User Agreement</a> | <a href="#">Privacy Policy</a></div>
+        </div>
+    </div>
+    <!--End Footer -->
+</body>
+</html>

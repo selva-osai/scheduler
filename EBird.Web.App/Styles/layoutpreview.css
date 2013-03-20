@@ -1,0 +1,23 @@
+﻿/* Style for layout sections */
+
+.Registration-Cont { width:630px; margin: 0px auto; padding:0; height:100%; overflow:auto;}
+.regWebTitle 
+{
+  font-size:12px; 
+    color:#003366;
+}
+.pvWebinar-Title{ border: 1px dashed #c0c0c0; height:35px; width: 600px; margin: 2px 2px 2px 2px; vertical-align:middle; text-align:center; }
+.pvLogo { border: 1px dashed #c0c0c0; height:50px; width: 600px; margin: 1px 2px 2px 2px; vertical-align:middle; text-align:center; }
+.Regi-Top-Sec 	{width:55%; float:left;}
+
+.Webi-Date			{padding:10px; border:solid 1px #ccc; margin:0px 10px 14px 0px; width:250px; padding-bottom:15px;  text-align:left;border-radius:6px; background: url(../Images/rpBg.png) repeat;line-height: 17px;}
+.Webi-Date	h2 { font-size:12px; margin-bottom:5px; font-family:verdana; font-style:italic; }
+.Regi-Bott-Sec .L-Part     { width:308px; border:solid 1px #ccc; }
+.pvReg-Field {padding:10px; margin: 0px 10px 10px 10px; border:solid 1px #ccc; height:100%; line-height:30px; overflow:auto;border-radius:6px;background: url(../Images/rpBg.png) repeat;}
+.Regi-Bott-Sec {padding:10px; border:solid 1px #ccc !important; margin-bottom:10px; border-radius:6px;background: url(../Images/rpBg.png) repeat;}
+.Regi-Bott-Sec .R-Part     { width:308px; float:left; }
+.Regi-Bott-Sec .R-Part  .Webi-Summary {padding:10px; border:solid 1px #ccc; margin-bottom:10px;}
+.Regi-Bott-Sec .R-Part  .Webi-Summary p { margin-bottom:5px;}
+.Regi-Bott-Sec .R-Part  .Webi-Summary h2 { font-size:14px; color:#000; margin-bottom:10px;}
+.Regi-Bott-Sec .R-Part  .Webi-Speaker{padding:10px; border:solid 1px #ccc; }
+.Regi-Bott-Sec .L-Part     { width:308px; border:solid 1px #ccc; }

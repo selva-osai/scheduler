@@ -1,0 +1,287 @@
+﻿
+    .ddStyle1
+    {
+        font-family; Verdana;
+        font-size: 11px;
+        color: Black;
+    }
+    
+    .RadDock_Telerik .rdContent
+    {
+        font: normal 11px Verdana !important;
+    }
+        
+    .RadDock_Telerik .rdTitleBar em
+    {
+        font-family: Verdana !important;
+    }
+        
+    .RadComboBox_Default .rcbEmptyMessage
+    {
+        font: normal 11px Verdana !important;
+    }
+        
+    .accordion
+    {
+        width: 718px;
+    }
+    
+    .accordionHeader
+    {
+        border: 1px solid #FFFFFF;
+        color: black;
+        background-color: #E5E5E5;
+        font-family: Verdana;
+        font-size: 12px;
+        font-weight: normal;
+        padding: 3px;
+        margin-top: 3px;
+        cursor: pointer;
+    }
+
+        
+    .accordionHeader:hover
+    {
+        border: 1px solid #FFFFFF;
+        color: #1589FF;
+        background-color: #E5E5E5;
+        font-family: Verdana;
+        font-size: 12px;
+        font-weight: normal;
+        padding: 3px;
+        margin-top: 3px;
+        cursor: pointer;
+    }
+        
+    .accordionHeaderSelected
+    {
+        border: 1px solid #FFFFFF;
+        color: #1589FF;
+        background-color: #E5E5E5;
+        font-family: Verdana;
+        font-size: 12px;
+        font-weight: normal;
+        padding: 3px;
+        margin-top: 3px;
+        cursor: pointer;
+    }
+        
+    .accordionContent
+    {
+        background-color: #FFFFFF;
+        border: 0px dashed #FFFFFF;
+        color: black;
+        font-family: Verdana;
+        font-size: 11px;
+        font-weight: normal;
+        border-top: none;
+        padding-top: 10px;
+        padding-left: 5px;
+    }
+        
+    .accordion_adv
+    {
+        width: 705px;
+    }
+    .accordionHeader_adv
+    {
+        border: 1px solid #FFFFFF;
+        color: black;
+        background-color: #FFFFFF;
+        font-family: Verdana;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 3px;
+        margin-top: 3px;
+        cursor: pointer;
+        width:705px !important;
+    }
+        
+    .accordionHeader_adv:hover
+    {
+        border: 1px solid #FFFFFF;
+        color: black;
+        background-color: #FFFFFF;
+        font-family: Verdana;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 3px;
+        margin-top: 3px;
+        cursor: pointer;
+        /*width:705px !important;*/
+    }
+         
+    .accordionHeaderSelected_adv
+    {
+        border: 1px solid #FFFFFF;
+        color: black;
+        background-color: #FFFFFF;
+        font-family: Verdana;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 3px;
+        margin-top: 3px;
+        cursor: pointer;
+        /*width:705px !important;*/
+    }
+        
+    .accordionContent_adv
+    {
+        background-color: #FFFFFF;
+        border: 0px dashed #FFFFFF;
+        color: black;
+        font-family: Verdana;
+        font-size: 11px;
+        font-weight: normal;
+        border-top: none;
+        padding-top: 10px;
+        padding-left: 5px;
+        /*width:700px !important;*/
+    }
+    
+
+    .rteditor1 li 
+    {
+        height: 25px!important; 
+        padding-top:4px !important; border-top-style:none !important; 
+    }
+    
+    .rteditor1W
+    {
+        width:610px !important;
+    }
+    
+    .rtColorPicker
+    {
+        height:20px !important;
+        width:120px !important;
+    }
+    
+    .rtColorPicker li
+    {
+        float:left !important;
+        height:20px !important;
+        width:20px !important;
+    }
+    .ColorPickerPreview
+    {
+        margin-top: 0px !important;
+        margin-left: 2px !important;
+        padding-top: 2px !important;
+    }
+/*        .RadGrid a 
+            {
+                color: #1589FF !important;
+            }
+*/
+        .RadDock_Telerik .rdContent
+            {    
+                font: normal 11px Verdana !important; 
+            } 
+            
+        .RadDock_Telerik .rdTitleBar em
+            {    
+                font-family: Verdana !important;
+            }            
+       
+        .RadGrid Table
+            {
+                font: normal 11px Verdana !important;
+                color: Black;              
+            }
+                      
+        .RadGrid .rgHeader a
+            {
+                color:Black !important;
+            }
+            
+        .RadGrid .rgHeader
+            {
+                color:Black !important;
+            }
+            
+        .RadGrid
+            {
+                outline: none;
+            }
+               
+         .RadGrid img
+         {
+         outline:none;
+         }
+         
+        .RadGrid .rgNumPart a,
+        .RadGrid .rgNumPart a span,
+        .RadGrid .rgNumPart a:hover,
+        .RadGrid .rgNumPart a:hover span    
+            {
+	            background:#eee !important;
+	            color:#1589FF !important;
+	            text-decoration: none;
+	            outline: none;
+            } 
+            
+            
+        .RadGrid .rgNumPart a.rgCurrentPage,
+        .RadGrid .rgNumPart a.rgCurrentPage span
+           {
+	            background:#eee !important;
+	            color:Black !important;
+	            text-decoration: none;
+	            outline: none;
+            }   
+            
+        .RadGrid .rgInfoPart
+            {
+	            color:Black !important;
+            }
+
+        .RadGrid .rgInfoPart strong
+            {
+	            color:Black !important;
+            } 
+             
+        .RowMouseOver td  
+        {  
+            background-color: #E5E5E5 !important;  
+        }  
+        
+        .RowMouseOut  
+        {  
+            background: #ffffff;  
+        }       
+        
+        .gridIco
+        {
+            cursor:pointer;
+            border: 0px none inherent !important;    
+        } 
+
+        .gridIco1
+        {
+            cursor:pointer;
+            border: 0px none inherent !important;    
+        } 
+        
+        .rlst1
+        {
+            margin-bottom: 10px;   
+        }
+        
+        .rlst1 li
+        {
+          list-style-type:none !important;  
+          line-height:20px !important;
+          padding-left: 3px !important;
+          border:none !important;
+        }
+        
+        div.RadGrid .rgRefresh, 
+    div.RadGrid .rgRefresh + a
+    {
+        color:#1589ff!important;
+        text-decoration:none!important;
+        float:none !important; 
+        cursor:pointer;
+
+    }

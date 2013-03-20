@@ -1,0 +1,262 @@
+﻿/*qtip styles */
+.ui-tooltip, .qtip
+{
+    position: absolute;
+    left: -28000px;
+    top: -28000px;
+    display: none;
+    min-width: 50px;
+    font-size: 10.5px;
+    line-height: 12px;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+}
+.ui-tooltip-fluid
+{
+    display: block;
+    visibility: hidden;
+    position: static !important;
+    float: left !important;
+}
+.ui-tooltip-content
+{
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    word-wrap: break-word;
+    font-size: 12px;
+    line-height: 22px;
+    background: #fff;
+    border-radius: 5px;
+    color: #000;
+    padding: 3px 3px 3px 3px;
+    border-width: 3px;
+    border-color: #c0c0c0;
+}
+.ui-tooltip-titlebar
+{
+    position: relative;
+    min-height: 14px;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-width: 0 0 1px;
+    padding: 5px 35px 5px 10px;
+}
+.ui-tooltip-titlebar + .ui-tooltip-content
+{
+    border-top-width: 0 !important;
+}
+.ui-tooltip-titlebar .ui-state-default
+{
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -9px;
+    cursor: pointer;
+    outline: medium none;
+    border-style: solid;
+    border-width: 1px;
+}
+* html .ui-tooltip-titlebar .ui-state-default
+{
+    top: 16px;
+}
+.ui-tooltip-titlebar .ui-icon, .ui-tooltip-icon .ui-icon
+{
+    display: block;
+    text-indent: -1000em;
+}
+.ui-tooltip-icon, .ui-tooltip-icon .ui-icon
+{
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.ui-tooltip-icon .ui-icon
+{
+    width: 18px;
+    height: 14px;
+    text-align: center;
+    text-indent: 0;
+    font: normal bold 10px/13px Tahoma, sans-serif;
+    color: inherit;
+    background: transparent none no-repeat -100em -100em;
+}
+.ui-tooltip-default
+{
+    border: solid 1px #fff;
+    background-color: #fff;
+    color: #fff;
+    box-shadow: 0 0 10px #2b6c8e;
+}
+.ui-tooltip-default .ui-tooltip-titlebar
+{
+    background-color: #fff;
+    color: #000;
+    border-bottom: dotted 1px #215d83;
+    margin-bottom: 5px;
+}
+.ui-tooltip-default .ui-tooltip-icon
+{
+    background: #F1F1F1;
+    color: #777;
+    border-color: #CCC;
+}
+.ui-tooltip-default .ui-tooltip-titlebar .ui-state-hover
+{
+    color: #111;
+    border-color: #AAA;
+}
+.ui-tooltip .ui-tooltip-tip
+{
+    overflow: hidden;
+    z-index: 10;
+    margin: 0 auto;
+}
+.ui-tooltip .ui-tooltip-tip, .ui-tooltip .ui-tooltip-tip *
+{
+    position: absolute;
+    line-height: .1px !important;
+    font-size: .1px !important;
+    color: #123456;
+    background: transparent;
+    border: 0 dashed transparent;
+}
+.ui-tooltip .ui-tooltip-tip canvas
+{
+    top: 0;
+    left: 0;
+}
+#qtip-overlay
+{
+    position: fixed;
+    left: -10000em;
+    top: -10000em;
+}
+#qtip-overlay.blurs
+{
+    cursor: pointer;
+}
+#qtip-overlay div
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+}
+.ui-tooltip-rounded, .ui-tooltip-tipsy, .ui-tooltip-bootstrap
+{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+.ui-tooltip-tipsy
+{
+    background: #000;
+    color: #fff;
+    border: 0 solid transparent;
+    font-family: "Open Sans";
+    line-height: 10px;
+    text-shadow: 0 1px #000;
+    box-shadow: 0 0 0 #fff;
+    padding: 0;
+}
+.ui-tooltip-tipsy .ui-tooltip-titlebar
+{
+    background-color: transparent;
+    padding: 6px 35px 0 10px;
+}
+.ui-tooltip-tipsy .ui-tooltip-content
+{
+    background: #000;
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 11px;
+    padding: 1px 10px;
+}
+.ui-tooltip-tipsy .ui-tooltip-icon
+{
+    text-shadow: none;
+    border-color: #222;
+}
+.ui-tooltip-tipsy .ui-tooltip-titlebar .ui-state-hover
+{
+    border-color: #303030;
+}
+.ui-tooltip-dialogue
+{
+    max-width: 420px;
+    min-width: 210px;
+    -moz-box-shadow: 0 0 10px 1px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,.5);
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.5);
+}
+.ui-tooltip-dialogue .ui-tooltip-content
+{
+    padding: 10px;
+}
+.ui-tooltip-dialogue button
+{
+    float: left;
+    width: 47%;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 10.5px;
+    padding: 3px 0;
+}
+.ui-tooltip-dialogue button + button
+{
+    float: right;
+    margin-right: 0;
+}
+.ui-tooltip-dialogue input
+{
+    width: 95%;
+    margin-bottom: 7px;
+    font-size: 10.5px;
+    padding: 3px 0 3px 5px;
+}
+.ui-tooltip-dialogue button.full
+{
+    float: none;
+    width: 100%;
+}
+/* qtip styles */
+.bgfill
+{
+    border: solid 1px #F5F3F3;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0;
+    background: #ECECEC;
+    width: 100%;
+}
+
+#modalContainer .modalClose
+{
+	position:absolute;
+	float:right;
+	top:1px;
+	right:1px;
+	z-index:4000;
+}
+
+#modalContainer .modalClose1
+{
+	position:absolute;
+	float:right;
+	top:5px;
+	right:55px;
+	z-index:4000;
+}

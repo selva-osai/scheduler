@@ -1,0 +1,431 @@
+﻿body
+{
+    background: repeat-x 0px 69px rgb(255, 255, 255);
+    margin-top: 0px;
+}
+td
+{
+    margin: 0px;
+    padding: 0px;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.content
+{
+    width: 500px;
+    margin: 8px auto;
+    min-height:525px;
+}
+.tleft
+{
+    background: url("/images/layout/2tl.png") no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.tmid
+{
+    background: url("/images/layout/2t.png") repeat-x;
+    height: 15px;
+}
+.tright
+{
+    background: url("/images/layout/2tr.png") no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.lmid
+{
+    background: url("/images/layout/2l.png") repeat-y;
+    width: 15px;
+}
+
+.rmid
+{
+    background: url("/images/layout/2r.png") repeat-y;
+    width: 15px;
+}
+
+
+.bleft
+{
+    background: url("/images/layout/2bl.png") no-repeat;
+    width: 15px;
+    height: 15px;
+}
+.bmid
+{
+    background: url("/images/layout/2b.png") repeat-x;
+    height: 15px;
+}
+.bright
+{
+    background: url("/images/layout/2br.png") no-repeat;
+    width: 15px;
+    height: 15px;
+}
+
+.cmc
+{
+    background-color: white;
+}
+
+.regWebTitle
+{
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 15px 5px 15px 5px;
+}
+
+.regWebDesc
+{
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 23px;
+}
+
+#dvbutton
+{
+    color: #fff;
+    padding: 8px 25px 8px 25px !important;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 10px;
+    border: 1px solid #0076a3;
+    background: rgb(42,157,229) none repeat scroll 0%; /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2a9de5', endColorstr='#0f6eed');*/
+}
+.RegSubButton
+{
+    width: auto;
+    overflow: visible;
+    padding-right: 0.25em;
+    padding-left: 0.25em;
+}
+
+.SubBtn, a.SubBtn
+{
+    background: url(/Images/LinkBtnBg.gif) repeat-x left top;
+    height: 22px;
+    line-height: 18px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 10px;
+    border: solid 1px #d9dcdc;
+    font-size: 11px;
+}
+a.SubBtn
+{
+    width: 80px;
+    padding: 5px 25px;
+    color: #000;
+    text-decoration: none;
+}
+a.SubBtn:hover
+{
+    color: #c80108;
+}
+
+
+#dvRegForm ul li
+{
+    padding: 2px 2px 2px 2px;
+    list-style-type: none;
+}
+
+#dvPreEmail
+{
+    padding: 2px 2px 2px 2px;
+}
+
+.textbox_EB
+{
+    border: solid 1px #9e9e9e;
+    padding-left: 3px;
+    font-size: 11px;
+    font-family: verdana;
+    border-radius: 3px;
+    margin-bottom: 6px;
+    height: 20px;
+    width: 250px;
+}
+
+.regOutline
+{
+    background-color: #ececec;
+    border-radius: 5px;
+}
+
+.PremailOutline
+{
+    background-color: #53565a;
+    color: #5fc1e9;
+    border-radius: 5px;
+}
+.eventDate
+{
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid #e75301;
+    height: 75px;
+    border-radius: 5px;
+}
+
+.fld1
+{
+    list-style-type: none;
+    padding: 2px 5px 0px 40px;
+}
+
+.specialbutton
+{
+    height: 32px;
+    cursor: pointer;
+}
+.specialbutton .center
+{
+    padding: 0px 12px;
+    vertical-align: middle;
+}
+.specialbutton a
+{
+    text-decoration: none;
+    color: #000;
+}
+.orangel
+{
+    background: url("/images/MasterSprite.png") no-repeat scroll -17px -143px transparent;
+    width: 5px;
+    height: 32px;
+    overflow: hidden;
+}
+.orangec
+{
+    background: url("/images/MasterSprite.png") repeat-x scroll 0px -1px transparent;
+    height: 33px;
+}
+.oranger
+{
+    background: url("/images/MasterSprite.png") no-repeat scroll -10px -143px transparent;
+    width: 5px;
+    height: 32px;
+    overflow: hidden;
+}
+
+img.floatLeft
+{
+    float: left;
+    margin: 4px;
+}
+img.floatRight
+{
+    float: right;
+    margin: 4px;
+}
+
+
+/* registration related style */
+
+/* CSS Document */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+ul, li
+{
+    list-style-type: none;
+}
+a, a:link
+{
+    outline: none;
+}
+img
+{
+    border: none;
+}
+.FLeft
+{
+    float: left;
+}
+.FRight
+{
+    float: right;
+}
+.Clr
+{
+    clear: both;
+}
+
+.Registration-Cont
+{
+    width: 630px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.Webinar-Title
+{
+    padding: 10px;
+    border: solid 1px #ccc;
+    margin-bottom: 10px;
+}
+.Webinar-Title h1
+{
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+}
+.Webi-Banner
+{
+    padding: 10px;
+    border: solid 1px #ccc;
+    margin-bottom: 10px;
+}
+.Pre-Reg-Email
+{
+    padding: 10px;
+    border: solid 1px #ccc;
+    margin-bottom: 10px;
+    width: 288px;
+    float: left;
+    margin-right: 10px;
+    height: 50px;
+}
+.Webi-Date
+{
+    padding: 10px;
+    border: solid 1px #ccc;
+    margin-bottom: 10px;
+    width: 288px;
+    float: left;
+    height: 50px;
+    text-align: center;
+}
+.Webi-Date h2
+{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.Regi-Bott-Sec .L-Part
+{
+    width: 308px;
+    float: left;
+    margin-right: 10px;
+}
+.Regi-Bott-Sec .L-Part .Reg-Field
+{
+    padding: 10px;
+    border: solid 1px #ccc;
+}
+.Regi-Bott-Sec .R-Part
+{
+    width: 308px;
+    float: left;
+}
+.Regi-Bott-Sec .R-Part .Webi-Summary
+{
+    padding: 10px;
+    border: solid 1px #ccc;
+    margin-bottom: 10px;
+}
+.Regi-Bott-Sec .R-Part .Webi-Summary p
+{
+    margin-bottom: 5px;
+}
+.Regi-Bott-Sec .R-Part .Webi-Summary h2
+{
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 10px;
+}
+.Regi-Bott-Sec .R-Part .Webi-Speaker
+{
+    padding: 10px;
+    border: solid 1px #ccc;
+}
+.Webi-Speaker .Profile
+{
+    margin-bottom: 20px;
+}
+.Profile .Pro-img
+{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.Profile .Pro-name
+{
+    font-weight: bold;
+}
+.Profile .Pro-Desi
+{
+    margin-bottom: 10px;
+}
+.Profile .Pro-title
+{
+    font-size: 14px;
+    font-style: italic;
+}
+.Reg-Field .RF-Row
+{
+    margin-bottom: 10px;
+}
+.Reg-Field label
+{
+    color: #000;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+}
+.Reg-Field input[type=text]
+{
+    width: 266px;
+    height: 26px;
+    line-height: 26px;
+    background: none repeat scroll 0 0 #EDEDED;
+    border: medium none;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 2px #BEBEBE inset;
+    color: #908F8F;
+    margin-bottom: 3px;
+    color: #000;
+    padding: 0 10px;
+}
+.Reg-Field h2
+{
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 18px;
+}
+.Pre-Reg-Email input[type=text]
+{
+    width: 160px;
+    height: 26px;
+    line-height: 26px;
+    background: none repeat scroll 0 0 #EDEDED;
+    border: medium none;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 2px #BEBEBE inset;
+    color: #908F8F;
+    padding: 0 10px;
+    color: #000;
+}
+.Pre-Reg-Email .PRE-Titile
+{
+    margin-bottom: 5px;
+}
+.Error
+{
+    color: #ff0000;
+}
+.Submit-btn
+{
+    background: url(../Images/OrangeBg.gif) repeat-x left top;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    padding: 0 10px;
+    border: none;
+}

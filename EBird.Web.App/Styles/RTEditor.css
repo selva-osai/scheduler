@@ -1,0 +1,17 @@
+﻿body
+{
+    background-color: White !important;
+    color: Black !important;
+    font-family:verdana !important;
+    font-size:11px !important;
+}
+#dvRTBio
+{
+    padding: 5px 5px 5px 5px;
+}
+#dvRTBio body
+{
+    background: font-family:Verdana,Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
